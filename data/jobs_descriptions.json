@@ -1,0 +1,914 @@
+[
+  {
+    "company": "TechCorp Solutions",
+    "url": "https://techcorp.com",
+    "remoteFriendly": true,
+    "market": "Software Development",
+    "size": "100-500",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Senior Python Developer",
+        "description": "We're looking for a senior Python developer to join our backend team. You'll be working on scalable microservices and API development using Django and Flask frameworks.",
+        "url": "https://techcorp.com/jobs/senior-python-developer",
+        "type": "full-time",
+        "posted": "2024-01-15",
+        "location": "Remote",
+        "skills": ["Python", "Django", "Flask", "PostgreSQL", "Redis", "AWS", "Docker", "Git"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.02
+        },
+        "perks": ["remote work", "health insurance", "401k matching", "learning budget"],
+        "apply": "https://techcorp.com/jobs/senior-python-developer/apply"
+      },
+      {
+        "position": "Frontend Developer",
+        "title": "React.js Developer",
+        "description": "Join our frontend team to build modern web applications using React.js, TypeScript, and modern CSS frameworks. Experience with state management and testing is required.",
+        "url": "https://techcorp.com/jobs/react-developer",
+        "type": "full-time",
+        "posted": "2024-01-10",
+        "location": "San Francisco, CA",
+        "skills": ["React", "TypeScript", "JavaScript", "CSS", "HTML", "Redux", "Jest", "Webpack"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 130000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["health insurance", "gym membership", "free lunch", "stock options"],
+        "apply": "https://techcorp.com/jobs/react-developer/apply"
+      },
+      {
+        "position": "Full Stack Developer",
+        "title": "MERN Stack Developer",
+        "description": "Build end-to-end web applications using MongoDB, Express.js, React.js, and Node.js. Experience with Firebase and deployment on Vercel preferred.",
+        "url": "https://techcorp.com/jobs/mern-developer",
+        "type": "full-time",
+        "posted": "2024-01-22",
+        "location": "Remote",
+        "skills": ["MongoDB", "Express.js", "React.js", "Node.js", "JavaScript", "Firebase", "Vercel", "Git"],
+        "salaryRange": {
+          "from": 95000,
+          "to": 125000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["remote work", "health insurance", "flexible hours", "tech stipend"],
+        "apply": "https://techcorp.com/jobs/mern-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "DataScience Inc",
+    "url": "https://datascience-inc.com",
+    "remoteFriendly": false,
+    "market": "Data Analytics",
+    "size": "50-200",
+    "jobs": [
+      {
+        "position": "Data Scientist",
+        "title": "Machine Learning Engineer",
+        "description": "We need a skilled ML engineer to develop and deploy machine learning models for our recommendation system. Experience with Python, TensorFlow, and cloud platforms is essential.",
+        "url": "https://datascience-inc.com/jobs/ml-engineer",
+        "type": "full-time",
+        "posted": "2024-01-20",
+        "location": "New York, NY",
+        "skills": ["Python", "TensorFlow", "PyTorch", "scikit-learn", "pandas", "numpy", "AWS", "Kubernetes"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["health insurance", "dental coverage", "401k", "conference budget"],
+        "apply": "https://datascience-inc.com/jobs/ml-engineer/apply"
+      },
+      {
+        "position": "Data Analyst",
+        "title": "Business Intelligence Analyst",
+        "description": "Looking for a BI analyst to create dashboards and reports using Tableau and SQL. You'll work with large datasets to provide insights for business decisions.",
+        "url": "https://datascience-inc.com/jobs/bi-analyst",
+        "type": "full-time",
+        "posted": "2024-01-18",
+        "location": "Chicago, IL",
+        "skills": ["SQL", "Tableau", "Power BI", "Python", "Excel", "Statistics", "Data Visualization"],
+        "salaryRange": {
+          "from": 80000,
+          "to": 110000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.001,
+          "to": 0.005
+        },
+        "perks": ["health insurance", "flexible hours", "training budget"],
+        "apply": "https://datascience-inc.com/jobs/bi-analyst/apply"
+      },
+      {
+        "position": "Data Scientist",
+        "title": "NLP Research Scientist",
+        "description": "Join our NLP team to develop state-of-the-art language models using BERT, T5, and Hugging Face Transformers. Focus on text classification and sentiment analysis.",
+        "url": "https://datascience-inc.com/jobs/nlp-scientist",
+        "type": "full-time",
+        "posted": "2024-01-25",
+        "location": "Boston, MA",
+        "skills": ["Python", "NLTK", "SpaCy", "Hugging Face Transformers", "BERT", "T5", "TensorFlow", "PyTorch"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 190000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.04
+        },
+        "perks": ["health insurance", "research budget", "conference travel", "publication bonus"],
+        "apply": "https://datascience-inc.com/jobs/nlp-scientist/apply"
+      }
+    ]
+  },
+  {
+    "company": "CloudTech Innovations",
+    "url": "https://cloudtech.io",
+    "remoteFriendly": true,
+    "market": "Cloud Services",
+    "size": "200-1000",
+    "jobs": [
+      {
+        "position": "DevOps Engineer",
+        "title": "Senior DevOps Engineer",
+        "description": "We're seeking a DevOps engineer with expertise in containerization, orchestration, and CI/CD pipelines. AWS certification and Kubernetes experience preferred.",
+        "url": "https://cloudtech.io/jobs/devops-engineer",
+        "type": "full-time",
+        "posted": "2024-01-12",
+        "location": "Remote",
+        "skills": ["AWS", "Kubernetes", "Docker", "Terraform", "CI/CD", "Jenkins", "Linux", "Python"],
+        "salaryRange": {
+          "from": 125000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.03
+        },
+        "perks": ["remote work", "stock options", "health insurance", "annual retreat"],
+        "apply": "https://cloudtech.io/jobs/devops-engineer/apply"
+      },
+      {
+        "position": "Cloud Architect",
+        "title": "Cloud Solutions Architect",
+        "description": "Design and implement scalable cloud architectures for enterprise clients. Must have experience with AWS, Azure, and GCP.",
+        "url": "https://cloudtech.io/jobs/cloud-architect",
+        "type": "full-time",
+        "posted": "2024-01-08",
+        "location": "Remote",
+        "skills": ["AWS", "Azure", "GCP", "Cloud Architecture", "Networking", "Security", "Terraform", "Ansible"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.04
+        },
+        "perks": ["remote work", "health insurance", "conference budget", "flexible hours"],
+        "apply": "https://cloudtech.io/jobs/cloud-architect/apply"
+      },
+      {
+        "position": "Cloud Architect",
+        "title": "AWS Cloud Solutions Architect",
+        "description": "Design and implement scalable cloud solutions using AWS services. Collaborate with cross-functional teams to deliver secure and efficient cloud-based architectures.",
+        "url": "https://cloudtech.io/jobs/cloud-architect",
+        "type": "full-time",
+        "posted": "2024-01-17",
+        "location": "Remote",
+        "skills": ["AWS", "Terraform", "CloudFormation", "Kubernetes", "Docker", "Security", "Networking", "CI/CD"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 170000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.03
+        },
+        "perks": ["remote work", "stock options", "AWS certification reimbursement", "wellness benefits"],
+        "apply": "https://cloudtech.io/jobs/cloud-architect/apply"
+      },
+      {
+        "position": "Site Reliability Engineer",
+        "title": "SRE - Monitoring and Automation",
+        "description": "As an SRE, you'll ensure reliability and uptime across services. Focus on infrastructure automation, observability, and incident response workflows.",
+        "url": "https://cloudtech.io/jobs/sre-monitoring",
+        "type": "full-time",
+        "posted": "2024-01-19",
+        "location": "Remote",
+        "skills": ["Prometheus", "Grafana", "Go", "Python", "Terraform", "CI/CD", "Linux", "AWS"],
+        "salaryRange": {
+          "from": 135000,
+          "to": 165000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.025
+        },
+        "perks": ["work from anywhere", "education stipend", "on-call bonus", "mental health days"],
+        "apply": "https://cloudtech.io/jobs/sre-monitoring/apply"
+      }
+    ]
+  },
+  {
+    "company": "VisionAI Labs",
+    "url": "https://visionai.com",
+    "remoteFriendly": true,
+    "market": "Computer Vision & AI",
+    "size": "10-50",
+    "jobs": [
+      {
+        "position": "Computer Vision Engineer",
+        "title": "Real-Time Video Processing Engineer",
+        "description": "Develop high-performance computer vision applications for live video streams using OpenCV and deep learning frameworks.",
+        "url": "https://visionai.com/jobs/vision-engineer",
+        "type": "full-time",
+        "posted": "2024-01-14",
+        "location": "Remote",
+        "skills": ["OpenCV", "PyTorch", "CUDA", "C++", "Python", "TensorRT", "Edge AI", "Docker"],
+        "salaryRange": {
+          "from": 125000,
+          "to": 155000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.05
+        },
+        "perks": ["remote work", "equity", "research budget", "AI conference travel"],
+        "apply": "https://visionai.com/jobs/vision-engineer/apply"
+      },
+      {
+        "position": "AI Research Intern",
+        "title": "Summer Research Intern – Computer Vision",
+        "description": "Join our research team for a summer internship to explore new architectures for video object tracking and pose estimation.",
+        "url": "https://visionai.com/jobs/ai-research-intern",
+        "type": "internship",
+        "posted": "2024-01-09",
+        "location": "Remote",
+        "skills": ["Deep Learning", "PyTorch", "OpenCV", "Python", "MATLAB", "TensorFlow"],
+        "salaryRange": {
+          "from": 3000,
+          "to": 5000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0,
+          "to": 0
+        },
+        "perks": ["remote internship", "research mentoring", "publication opportunity", "letter of recommendation"],
+        "apply": "https://visionai.com/jobs/ai-research-intern/apply"
+      }
+    ]
+  },
+  {
+    "company": "StreamlineAI",
+    "url": "https://streamlineai.com",
+    "remoteFriendly": true,
+    "market": "Artificial Intelligence & Automation",
+    "size": "25-100",
+    "jobs": [
+      {
+        "position": "AI Engineer",
+        "title": "LLM Application Developer",
+        "description": "Build and deploy Large Language Model applications using LangChain, LangGraph, and LlamaIndex. Work on conversational AI and document processing systems.",
+        "url": "https://streamlineai.com/jobs/llm-developer",
+        "type": "full-time",
+        "posted": "2024-01-23",
+        "location": "Remote",
+        "skills": ["Python", "LangChain", "LangGraph", "LlamaIndex", "Hugging Face Transformers", "OpenAI API", "Streamlit", "Docker"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 170000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["remote work", "equity", "AI research budget", "conference stipend"],
+        "apply": "https://streamlineai.com/jobs/llm-developer/apply"
+      },
+      {
+        "position": "AI Engineer",
+        "title": "Generative AI Specialist",
+        "description": "Develop cutting-edge generative AI solutions using transformer models, diffusion models, and multimodal AI. Experience with fine-tuning and prompt engineering required.",
+        "url": "https://streamlineai.com/jobs/generative-ai-specialist",
+        "type": "full-time",
+        "posted": "2024-01-21",
+        "location": "Remote",
+        "skills": ["Python", "TensorFlow", "PyTorch", "Hugging Face Transformers", "BERT", "T5", "Stable Diffusion", "OpenAI API"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.025,
+          "to": 0.06
+        },
+        "perks": ["remote work", "stock options", "GPU access", "research publications"],
+        "apply": "https://streamlineai.com/jobs/generative-ai-specialist/apply"
+      },
+      {
+        "position": "MLOps Engineer",
+        "title": "ML Platform Engineer",
+        "description": "Build and maintain ML infrastructure using Docker, AWS, and CI/CD pipelines. Deploy models to production and monitor performance.",
+        "url": "https://streamlineai.com/jobs/mlops-engineer",
+        "type": "full-time",
+        "posted": "2024-01-16",
+        "location": "Remote",
+        "skills": ["Python", "Docker", "AWS", "GCP", "MLflow", "Kubeflow", "TensorFlow", "PyTorch"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 155000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.04
+        },
+        "perks": ["remote work", "health insurance", "learning budget", "flexible hours"],
+        "apply": "https://streamlineai.com/jobs/mlops-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "MobileFirst Solutions",
+    "url": "https://mobilefirst.dev",
+    "remoteFriendly": true,
+    "market": "Mobile Development",
+    "size": "75-250",
+    "jobs": [
+      {
+        "position": "Mobile Developer",
+        "title": "Flutter Developer",
+        "description": "Develop cross-platform mobile applications using Flutter/Dart. Experience with Firebase integration and app store deployment required.",
+        "url": "https://mobilefirst.dev/jobs/flutter-developer",
+        "type": "full-time",
+        "posted": "2024-01-13",
+        "location": "Remote",
+        "skills": ["Dart", "Flutter", "Firebase", "Android", "iOS", "Git", "REST APIs", "SQLite"],
+        "salaryRange": {
+          "from": 90000,
+          "to": 120000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.02
+        },
+        "perks": ["remote work", "health insurance", "device allowance", "app store fees covered"],
+        "apply": "https://mobilefirst.dev/jobs/flutter-developer/apply"
+      },
+      {
+        "position": "Backend Developer",
+        "title": "Node.js API Developer",
+        "description": "Build scalable backend APIs using Node.js and Express.js. Work with MongoDB and MySQL databases to support mobile applications.",
+        "url": "https://mobilefirst.dev/jobs/nodejs-developer",
+        "type": "full-time",
+        "posted": "2024-01-11",
+        "location": "Remote",
+        "skills": ["Node.js", "Express.js", "JavaScript", "MongoDB", "MySQL", "REST APIs", "JWT", "AWS"],
+        "salaryRange": {
+          "from": 85000,
+          "to": 115000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["remote work", "health insurance", "learning stipend", "flexible schedule"],
+        "apply": "https://mobilefirst.dev/jobs/nodejs-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "DesignTech Studios",
+    "url": "https://designtech.studio",
+    "remoteFriendly": true,
+    "market": "Design & Development",
+    "size": "30-100",
+    "jobs": [
+      {
+        "position": "Frontend Developer",
+        "title": "React UI/UX Developer",
+        "description": "Create beautiful, responsive user interfaces using React.js, Tailwind CSS, and modern design principles. Collaborate with designers using Figma.",
+        "url": "https://designtech.studio/jobs/react-ui-developer",
+        "type": "full-time",
+        "posted": "2024-01-24",
+        "location": "Remote",
+        "skills": ["React.js", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "Figma", "Git", "Responsive Design"],
+        "salaryRange": {
+          "from": 80000,
+          "to": 110000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["remote work", "design tools subscription", "health insurance", "creative freedom"],
+        "apply": "https://designtech.studio/jobs/react-ui-developer/apply"
+      },
+      {
+        "position": "Web Developer",
+        "title": "Full Stack Web Developer",
+        "description": "Build complete web applications from design to deployment. Use modern frameworks and deploy on Vercel. Experience with design tools like Canva is a plus.",
+        "url": "https://designtech.studio/jobs/fullstack-web-developer",
+        "type": "full-time",
+        "posted": "2024-01-20",
+        "location": "Remote",
+        "skills": ["HTML5", "CSS3", "JavaScript", "React.js", "Node.js", "MongoDB", "Vercel", "Canva"],
+        "salaryRange": {
+          "from": 75000,
+          "to": 105000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.003,
+          "to": 0.01
+        },
+        "perks": ["remote work", "project variety", "health insurance", "portfolio building"],
+        "apply": "https://designtech.studio/jobs/fullstack-web-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "DataFlow Analytics",
+    "url": "https://dataflow.analytics",
+    "remoteFriendly": false,
+    "market": "Data Science & Analytics",
+    "size": "100-300",
+    "jobs": [
+      {
+        "position": "Data Scientist",
+        "title": "Python Data Scientist",
+        "description": "Perform exploratory data analysis, build machine learning models, and create data visualizations. Strong Python skills and experience with scikit-learn required.",
+        "url": "https://dataflow.analytics/jobs/python-data-scientist",
+        "type": "full-time",
+        "posted": "2024-01-26",
+        "location": "Austin, TX",
+        "skills": ["Python", "scikit-learn", "pandas", "numpy", "matplotlib", "seaborn", "Jupyter", "SQL"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 145000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.025
+        },
+        "perks": ["health insurance", "401k matching", "data science conferences", "research time"],
+        "apply": "https://dataflow.analytics/jobs/python-data-scientist/apply"
+      },
+      {
+        "position": "Machine Learning Engineer",
+        "title": "Deep Learning Engineer",
+        "description": "Design and implement deep learning models using TensorFlow and Keras. Work on computer vision and NLP projects for enterprise clients.",
+        "url": "https://dataflow.analytics/jobs/deep-learning-engineer",
+        "type": "full-time",
+        "posted": "2024-01-18",
+        "location": "Seattle, WA",
+        "skills": ["Python", "TensorFlow", "Keras", "Deep Learning", "Computer Vision", "NLP", "GPU Computing", "Docker"],
+        "salaryRange": {
+          "from": 135000,
+          "to": 175000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["health insurance", "GPU workstations", "conference budget", "research publications"],
+        "apply": "https://dataflow.analytics/jobs/deep-learning-engineer/apply"
+      },
+      {
+        "position": "Data Engineer",
+        "title": "Python Data Pipeline Engineer",
+        "description": "Build and maintain data pipelines using Python, SQL, and cloud platforms. Experience with ETL processes and database optimization required.",
+        "url": "https://dataflow.analytics/jobs/data-pipeline-engineer",
+        "type": "full-time",
+        "posted": "2024-01-15",
+        "location": "Denver, CO",
+        "skills": ["Python", "SQL", "MySQL", "MongoDB", "ETL", "Apache Airflow", "AWS", "Data Warehousing"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 135000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.008,
+          "to": 0.02
+        },
+        "perks": ["health insurance", "remote work options", "learning budget", "stock options"],
+        "apply": "https://dataflow.analytics/jobs/data-pipeline-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "AgentFlow Systems",
+    "url": "https://agentflow.systems",
+    "remoteFriendly": true,
+    "market": "AI Agents & Automation",
+    "size": "15-60",
+    "jobs": [
+      {
+        "position": "AI Agent Developer",
+        "title": "Multi-Agent Systems Engineer",
+        "description": "Develop intelligent agent systems using Smolagents and LangGraph. Create autonomous workflows and multi-agent orchestration platforms.",
+        "url": "https://agentflow.systems/jobs/agent-developer",
+        "type": "full-time",
+        "posted": "2024-01-27",
+        "location": "Remote",
+        "skills": ["Python", "Smolagents", "LangChain", "LangGraph", "Multi-Agent Systems", "AI Orchestration", "API Integration", "Docker"],
+        "salaryRange": {
+          "from": 145000,
+          "to": 185000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.03,
+          "to": 0.07
+        },
+        "perks": ["remote work", "cutting-edge AI research", "high equity", "conference speaking opportunities"],
+        "apply": "https://agentflow.systems/jobs/agent-developer/apply"
+      },
+      {
+        "position": "AI Research Engineer",
+        "title": "Agentic AI Research Scientist",
+        "description": "Research and develop next-generation AI agent architectures. Work on reinforcement learning, planning, and reasoning systems.",
+        "url": "https://agentflow.systems/jobs/ai-research-engineer",
+        "type": "full-time",
+        "posted": "2024-01-22",
+        "location": "Remote",
+        "skills": ["Python", "Reinforcement Learning", "LangChain", "Smolagents", "PyTorch", "Planning Algorithms", "Multi-Agent RL", "Research"],
+        "salaryRange": {
+          "from": 155000,
+          "to": 200000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.04,
+          "to": 0.08
+        },
+        "perks": ["remote work", "research publications", "patent opportunities", "AI conference budget"],
+        "apply": "https://agentflow.systems/jobs/ai-research-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "CodeCraft Solutions",
+    "url": "https://codecraft.solutions",
+    "remoteFriendly": true,
+    "market": "Software Consulting",
+    "size": "50-150",
+    "jobs": [
+      {
+        "position": "Software Developer",
+        "title": "Multi-Language Developer",
+        "description": "Work on diverse client projects using Python, C++, Java, and JavaScript. Strong problem-solving skills and ability to learn new technologies quickly.",
+        "url": "https://codecraft.solutions/jobs/multi-language-developer",
+        "type": "full-time",
+        "posted": "2024-01-19",
+        "location": "Remote",
+        "skills": ["Python", "C++", "Java", "JavaScript", "C", "Problem Solving", "Algorithm Design", "Git"],
+        "salaryRange": {
+          "from": 90000,
+          "to": 125000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.02
+        },
+        "perks": ["remote work", "diverse projects", "skill development", "client interaction"],
+        "apply": "https://codecraft.solutions/jobs/multi-language-developer/apply"
+      },
+      {
+        "position": "Backend Developer",
+        "title": "Systems Programming Specialist",
+        "description": "Build high-performance backend systems using C, C++, and Python. Work on system-level programming and optimization projects.",
+        "url": "https://codecraft.solutions/jobs/systems-programmer",
+        "type": "full-time",
+        "posted": "2024-01-17",
+        "location": "Remote",
+        "skills": ["C", "C++", "Python", "System Programming", "Performance Optimization", "Linux", "Memory Management", "Debugging"],
+        "salaryRange": {
+          "from": 105000,
+          "to": 140000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.008,
+          "to": 0.025
+        },
+        "perks": ["remote work", "technical challenges", "performance bonuses", "learning opportunities"],
+        "apply": "https://codecraft.solutions/jobs/systems-programmer/apply"
+      }
+    ]
+  },
+  {
+    "company": "StreamlineApps",
+    "url": "https://streamlineapps.io",
+    "remoteFriendly": true,
+    "market": "Application Development",
+    "size": "20-80",
+    "jobs": [
+      {
+        "position": "Application Developer",
+        "title": "Streamlit Application Developer",
+        "description": "Create interactive data applications and dashboards using Streamlit. Build tools for data visualization and machine learning model deployment.",
+        "url": "https://streamlineapps.io/jobs/streamlit-developer",
+        "type": "full-time",
+        "posted": "2024-01-25",
+        "location": "Remote",
+        "skills": ["Python", "Streamlit", "Data Visualization", "Machine Learning", "pandas", "plotly", "scikit-learn", "Docker"],
+        "salaryRange": {
+          "from": 85000,
+          "to": 115000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.025
+        },
+        "perks": ["remote work", "data science focus", "creative projects", "flexible hours"],
+        "apply": "https://streamlineapps.io/jobs/streamlit-developer/apply"
+      },
+      {
+        "position": "Web Developer",
+        "title": "Full Stack Web Developer",
+        "description": "Build full stack web applications using React.js, Node.js, and MongoDB. Experience with REST APIs and cloud deployment is a plus.",
+        "url": "https://streamlineapps.io/jobs/fullstack-web-developer",
+        "type": "full-time",
+        "posted": "2024-01-21",
+        "location": "Remote",
+        "skills": ["React.js", "Node.js", "MongoDB", "JavaScript", "HTML5", "CSS3", "REST APIs", "Git"],
+        "salaryRange": {
+          "from": 90000,
+          "to": 120000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["remote work", "health insurance", "learning budget", "team retreats"],
+        "apply": "https://streamlineapps.io/jobs/fullstack-web-developer/apply"
+      },
+      {
+        "position": "Mobile Developer",
+        "title": "Flutter Mobile Developer",
+        "description": "Develop cross-platform mobile applications using Flutter and Dart. Experience with Firebase integration and app store deployment is required.",
+        "url": "https://streamlineapps.io/jobs/flutter-mobile-developer",
+        "type": "full-time",
+        "posted": "2024-01-18",
+        "location": "Remote",
+        "skills": ["Dart", "Flutter", "Firebase", "Android", "iOS", "Git", "REST APIs", "SQLite"],
+        "salaryRange": {
+          "from": 95000,
+          "to": 125000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.02
+        },
+        "perks": ["remote work", "device allowance", "health insurance", "app store fees covered"],
+        "apply": "https://streamlineapps.io/jobs/flutter-mobile-developer/apply"
+      },
+      {
+        "position": "Backend Developer",
+        "title": "Node.js Backend Developer",
+        "description": "Build scalable backend systems using Node.js and Express.js. Work with MongoDB and MySQL databases to support web and mobile applications.",
+        "url": "https://streamlineapps.io/jobs/nodejs-backend-developer",
+        "type": "full-time",
+        "posted": "2024-01-15",
+        "location": "Remote",
+        "skills": ["Node.js", "Express.js", "JavaScript", "MongoDB", "MySQL", "REST APIs", "JWT", "AWS"],
+        "salaryRange": {
+          "from": 90000,
+          "to": 120000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["remote work", "health insurance", "learning stipend", "flexible schedule"],
+        "apply": "https://streamlineapps.io/jobs/nodejs-backend-developer/apply"
+      },
+      {
+        "position": "Data Engineer",
+        "title": "Python Data Engineer",
+        "description": "Build and maintain data pipelines using Python, SQL, and cloud platforms. Experience with ETL processes and database optimization required.",
+        "url": "https://streamlineapps.io/jobs/python-data-engineer",
+        "type": "full-time",
+        "posted": "2024-01-12",
+        "location": "Remote",
+        "skills": ["Python", "SQL", "MySQL", "MongoDB", "ETL", "Apache Airflow", "AWS", "Data Warehousing"],
+        "salaryRange": {
+          "from": 95000,
+          "to": 125000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.008,
+          "to": 0.02
+        },
+        "perks": ["remote work", "health insurance", "learning budget", "stock options"],
+        "apply": "https://streamlineapps.io/jobs/python-data-engineer/apply"
+      },
+      {
+        "position": "AI Engineer",
+        "title": "AI Application Developer",
+        "description": "Develop AI applications using LangChain, LangGraph, and LlamaIndex. Focus on conversational AI and document processing systems.",
+        "url": "https://streamlineapps.io/jobs/ai-application-developer",
+        "type": "full-time",
+        "posted": "2024-01-10",
+        "location": "Remote",
+        "skills": ["Python", "LangChain", "LangGraph", "LlamaIndex", "Hugging Face Transformers", "OpenAI API", "Streamlit", "Docker"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["remote work", "AI research budget", "conference stipend", "flexible hours"],
+        "apply": "https://streamlineapps.io/jobs/ai-application-developer/apply"
+      },
+      {
+        "position": "Data Visualization Developer",
+        "title": "Interactive Dashboard Developer",
+        "description": "Build interactive dashboards and data visualization tools. Work with various data sources and create compelling UI/UX with Streamlit and Tailwind.",
+        "url": "https://streamlineapps.io/jobs/dashboard-dev",
+        "type": "full-time",
+        "posted": "2024-01-28",
+        "location": "Remote",
+        "skills": ["Python", "Streamlit", "Tailwind", "React.js", "Data Visualization", "MongoDB", "GitHub", "Plotly"],
+        "salaryRange": {
+          "from": 88000,
+          "to": 120000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.02
+        },
+        "perks": ["remote work", "research allowance", "design freedom", "learning stipend"],
+        "apply": "https://streamlineapps.io/jobs/dashboard-dev/apply"
+      }
+    ]
+  },
+  {
+    "company": "NeuroNet AI",
+    "url": "https://neuronet.ai",
+    "remoteFriendly": true,
+    "market": "AI Research & Development",
+    "size": "20-100",
+    "jobs": [
+      {
+        "position": "AI Engineer",
+        "title": "LLM Fine-Tuning Specialist",
+        "description": "Work on customizing Large Language Models using Hugging Face, LangChain, and in-house datasets. Focus on prompt engineering, embeddings, and RAG pipelines.",
+        "url": "https://neuronet.ai/jobs/llm-specialist",
+        "type": "full-time",
+        "posted": "2024-01-27",
+        "location": "Remote",
+        "skills": ["Python", "Hugging Face Transformers", "LangChain", "LLMs", "Prompt Engineering", "PyTorch", "Docker"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.025,
+          "to": 0.05
+        },
+        "perks": ["remote work", "GPU credits", "research time", "publication support"],
+        "apply": "https://neuronet.ai/jobs/llm-specialist/apply"
+      }
+    ]
+  },
+  {
+    "company": "DevBoost Labs",
+    "url": "https://devboostlabs.com",
+    "remoteFriendly": true,
+    "market": "Full Stack Development",
+    "size": "50-200",
+    "jobs": [
+      {
+        "position": "Full Stack Developer",
+        "title": "React & Flask Developer",
+        "description": "Build production-ready web apps using React.js, Tailwind, and Flask. Bonus if you have experience with MongoDB and Vercel deployment.",
+        "url": "https://devboostlabs.com/jobs/fullstack-developer",
+        "type": "full-time",
+        "posted": "2024-02-02",
+        "location": "Remote",
+        "skills": ["React.js", "Tailwind", "Flask", "MongoDB", "Vercel", "GitHub", "JavaScript"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 135000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.03
+        },
+        "perks": ["remote work", "startup environment", "flexible schedule", "tech stipend"],
+        "apply": "https://devboostlabs.com/jobs/fullstack-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "PromptAI Works",
+    "url": "https://promptai.works",
+    "remoteFriendly": true,
+    "market": "Generative AI & NLP",
+    "size": "15-75",
+    "jobs": [
+      {
+        "position": "AI Prompt Engineer",
+        "title": "Prompt Engineering and RAG Developer",
+        "description": "Design optimized prompts for GPT-based applications. Build document understanding pipelines using LangChain and LlamaIndex.",
+        "url": "https://promptai.works/jobs/prompt-engineer",
+        "type": "full-time",
+        "posted": "2024-02-01",
+        "location": "Remote",
+        "skills": ["Python", "Prompt Engineering", "LangChain", "LlamaIndex", "RAG", "T5", "BERT", "Docker"],
+        "salaryRange": {
+          "from": 125000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.03
+        },
+        "perks": ["remote work", "cutting-edge tech", "AI research opportunities", "flexible hours"],
+        "apply": "https://promptai.works/jobs/prompt-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "TensorForge Analytics",
+    "url": "https://tensorforge.ai",
+    "remoteFriendly": true,
+    "market": "AI & Data Platforms",
+    "size": "40-120",
+    "jobs": [
+      {
+        "position": "MLOps Engineer",
+        "title": "Cloud ML Engineer",
+        "description": "Deploy ML models at scale using AWS, GCP, and Docker. Implement CI/CD pipelines, automate training workflows, and monitor real-time performance.",
+        "url": "https://tensorforge.ai/jobs/mlops-engineer",
+        "type": "full-time",
+        "posted": "2024-02-03",
+        "location": "Remote",
+        "skills": ["Python", "AWS", "GCP", "Docker", "MLflow", "TensorFlow", "PyTorch", "CI/CD"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 170000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.04
+        },
+        "perks": ["remote work", "research credits", "compute stipend", "on-call bonuses"],
+        "apply": "https://tensorforge.ai/jobs/mlops-engineer/apply"
+      }
+    ]
+  }
+]
