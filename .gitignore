@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environments
+myvenv/
+venv/
+.env/
+
+# Node / Frontend (if any later)
+node_modules/
+*.log
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Uploads (don’t commit resumes)
+uploads/
+
+# Byte-compiled / temp files
+*.sqlite3
+*.db
+
+ml_models/__pycache__

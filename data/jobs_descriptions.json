@@ -1,0 +1,2159 @@
+[
+  {
+    "company": "TechCorp Solutions",
+    "url": "https://techcorp.com",
+    "remoteFriendly": true,
+    "market": "Software Development",
+    "size": "100-500",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Senior Python Developer",
+        "description": "We're looking for a senior Python developer to join our backend team. You'll be working on scalable microservices and API development using Django and Flask frameworks.",
+        "url": "https://techcorp.com/jobs/senior-python-developer",
+        "type": "full-time",
+        "posted": "2024-01-15",
+        "location": "Remote",
+        "skills": ["Python", "Django", "Flask", "PostgreSQL", "Redis", "AWS", "Docker", "Git"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.02
+        },
+        "perks": ["remote work", "health insurance", "401k matching", "learning budget"],
+        "apply": "https://techcorp.com/jobs/senior-python-developer/apply"
+      },
+      {
+        "position": "Frontend Developer",
+        "title": "React.js Developer",
+        "description": "Join our frontend team to build modern web applications using React.js, TypeScript, and modern CSS frameworks. Experience with state management and testing is required.",
+        "url": "https://techcorp.com/jobs/react-developer",
+        "type": "full-time",
+        "posted": "2024-01-10",
+        "location": "San Francisco, CA",
+        "skills": ["React", "TypeScript", "JavaScript", "CSS", "HTML", "Redux", "Jest", "Webpack"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 130000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["health insurance", "gym membership", "free lunch", "stock options"],
+        "apply": "https://techcorp.com/jobs/react-developer/apply"
+      },
+      {
+        "position": "Full Stack Developer",
+        "title": "MERN Stack Developer",
+        "description": "Build end-to-end web applications using MongoDB, Express.js, React.js, and Node.js. Experience with Firebase and deployment on Vercel preferred.",
+        "url": "https://techcorp.com/jobs/mern-developer",
+        "type": "full-time",
+        "posted": "2024-01-22",
+        "location": "Remote",
+        "skills": ["MongoDB", "Express.js", "React.js", "Node.js", "JavaScript", "Firebase", "Vercel", "Git"],
+        "salaryRange": {
+          "from": 95000,
+          "to": 125000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["remote work", "health insurance", "flexible hours", "tech stipend"],
+        "apply": "https://techcorp.com/jobs/mern-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "DataScience Inc",
+    "url": "https://datascience-inc.com",
+    "remoteFriendly": false,
+    "market": "Data Analytics",
+    "size": "50-200",
+    "jobs": [
+      {
+        "position": "Data Scientist",
+        "title": "Machine Learning Engineer",
+        "description": "We need a skilled ML engineer to develop and deploy machine learning models for our recommendation system. Experience with Python, TensorFlow, and cloud platforms is essential.",
+        "url": "https://datascience-inc.com/jobs/ml-engineer",
+        "type": "full-time",
+        "posted": "2024-01-20",
+        "location": "New York, NY",
+        "skills": ["Python", "TensorFlow", "PyTorch", "scikit-learn", "pandas", "numpy", "AWS", "Kubernetes"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["health insurance", "dental coverage", "401k", "conference budget"],
+        "apply": "https://datascience-inc.com/jobs/ml-engineer/apply"
+      },
+      {
+        "position": "Data Analyst",
+        "title": "Business Intelligence Analyst",
+        "description": "Looking for a BI analyst to create dashboards and reports using Tableau and SQL. You'll work with large datasets to provide insights for business decisions.",
+        "url": "https://datascience-inc.com/jobs/bi-analyst",
+        "type": "full-time",
+        "posted": "2024-01-18",
+        "location": "Chicago, IL",
+        "skills": ["SQL", "Tableau", "Power BI", "Python", "Excel", "Statistics", "Data Visualization"],
+        "salaryRange": {
+          "from": 80000,
+          "to": 110000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.001,
+          "to": 0.005
+        },
+        "perks": ["health insurance", "flexible hours", "training budget"],
+        "apply": "https://datascience-inc.com/jobs/bi-analyst/apply"
+      },
+      {
+        "position": "Data Scientist",
+        "title": "NLP Research Scientist",
+        "description": "Join our NLP team to develop state-of-the-art language models using BERT, T5, and Hugging Face Transformers. Focus on text classification and sentiment analysis.",
+        "url": "https://datascience-inc.com/jobs/nlp-scientist",
+        "type": "full-time",
+        "posted": "2024-01-25",
+        "location": "Boston, MA",
+        "skills": ["Python", "NLTK", "SpaCy", "Hugging Face Transformers", "BERT", "T5", "TensorFlow", "PyTorch"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 190000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.04
+        },
+        "perks": ["health insurance", "research budget", "conference travel", "publication bonus"],
+        "apply": "https://datascience-inc.com/jobs/nlp-scientist/apply"
+      }
+    ]
+  },
+  {
+    "company": "CloudTech Innovations",
+    "url": "https://cloudtech.io",
+    "remoteFriendly": true,
+    "market": "Cloud Services",
+    "size": "200-1000",
+    "jobs": [
+      {
+        "position": "DevOps Engineer",
+        "title": "Senior DevOps Engineer",
+        "description": "We're seeking a DevOps engineer with expertise in containerization, orchestration, and CI/CD pipelines. AWS certification and Kubernetes experience preferred.",
+        "url": "https://cloudtech.io/jobs/devops-engineer",
+        "type": "full-time",
+        "posted": "2024-01-12",
+        "location": "Remote",
+        "skills": ["AWS", "Kubernetes", "Docker", "Terraform", "CI/CD", "Jenkins", "Linux", "Python"],
+        "salaryRange": {
+          "from": 125000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.03
+        },
+        "perks": ["remote work", "stock options", "health insurance", "annual retreat"],
+        "apply": "https://cloudtech.io/jobs/devops-engineer/apply"
+      },
+      {
+        "position": "Cloud Architect",
+        "title": "Cloud Solutions Architect",
+        "description": "Design and implement scalable cloud architectures for enterprise clients. Must have experience with AWS, Azure, and GCP.",
+        "url": "https://cloudtech.io/jobs/cloud-architect",
+        "type": "full-time",
+        "posted": "2024-01-08",
+        "location": "Remote",
+        "skills": ["AWS", "Azure", "GCP", "Cloud Architecture", "Networking", "Security", "Terraform", "Ansible"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.04
+        },
+        "perks": ["remote work", "health insurance", "conference budget", "flexible hours"],
+        "apply": "https://cloudtech.io/jobs/cloud-architect/apply"
+      },
+      {
+        "position": "Cloud Architect",
+        "title": "AWS Cloud Solutions Architect",
+        "description": "Design and implement scalable cloud solutions using AWS services. Collaborate with cross-functional teams to deliver secure and efficient cloud-based architectures.",
+        "url": "https://cloudtech.io/jobs/cloud-architect",
+        "type": "full-time",
+        "posted": "2024-01-17",
+        "location": "Remote",
+        "skills": ["AWS", "Terraform", "CloudFormation", "Kubernetes", "Docker", "Security", "Networking", "CI/CD"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 170000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.03
+        },
+        "perks": ["remote work", "stock options", "AWS certification reimbursement", "wellness benefits"],
+        "apply": "https://cloudtech.io/jobs/cloud-architect/apply"
+      },
+      {
+        "position": "Site Reliability Engineer",
+        "title": "SRE - Monitoring and Automation",
+        "description": "As an SRE, you'll ensure reliability and uptime across services. Focus on infrastructure automation, observability, and incident response workflows.",
+        "url": "https://cloudtech.io/jobs/sre-monitoring",
+        "type": "full-time",
+        "posted": "2024-01-19",
+        "location": "Remote",
+        "skills": ["Prometheus", "Grafana", "Go", "Python", "Terraform", "CI/CD", "Linux", "AWS"],
+        "salaryRange": {
+          "from": 135000,
+          "to": 165000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.025
+        },
+        "perks": ["work from anywhere", "education stipend", "on-call bonus", "mental health days"],
+        "apply": "https://cloudtech.io/jobs/sre-monitoring/apply"
+      }
+    ]
+  },
+  {
+    "company": "VisionAI Labs",
+    "url": "https://visionai.com",
+    "remoteFriendly": true,
+    "market": "Computer Vision & AI",
+    "size": "10-50",
+    "jobs": [
+      {
+        "position": "Computer Vision Engineer",
+        "title": "Real-Time Video Processing Engineer",
+        "description": "Develop high-performance computer vision applications for live video streams using OpenCV and deep learning frameworks.",
+        "url": "https://visionai.com/jobs/vision-engineer",
+        "type": "full-time",
+        "posted": "2024-01-14",
+        "location": "Remote",
+        "skills": ["OpenCV", "PyTorch", "CUDA", "C++", "Python", "TensorRT", "Edge AI", "Docker"],
+        "salaryRange": {
+          "from": 125000,
+          "to": 155000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.05
+        },
+        "perks": ["remote work", "equity", "research budget", "AI conference travel"],
+        "apply": "https://visionai.com/jobs/vision-engineer/apply"
+      },
+      {
+        "position": "AI Research Intern",
+        "title": "Summer Research Intern – Computer Vision",
+        "description": "Join our research team for a summer internship to explore new architectures for video object tracking and pose estimation.",
+        "url": "https://visionai.com/jobs/ai-research-intern",
+        "type": "internship",
+        "posted": "2024-01-09",
+        "location": "Remote",
+        "skills": ["Deep Learning", "PyTorch", "OpenCV", "Python", "MATLAB", "TensorFlow"],
+        "salaryRange": {
+          "from": 3000,
+          "to": 5000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0,
+          "to": 0
+        },
+        "perks": ["remote internship", "research mentoring", "publication opportunity", "letter of recommendation"],
+        "apply": "https://visionai.com/jobs/ai-research-intern/apply"
+      }
+    ]
+  },
+  {
+    "company": "StreamlineAI",
+    "url": "https://streamlineai.com",
+    "remoteFriendly": true,
+    "market": "Artificial Intelligence & Automation",
+    "size": "25-100",
+    "jobs": [
+      {
+        "position": "AI Engineer",
+        "title": "LLM Application Developer",
+        "description": "Build and deploy Large Language Model applications using LangChain, LangGraph, and LlamaIndex. Work on conversational AI and document processing systems.",
+        "url": "https://streamlineai.com/jobs/llm-developer",
+        "type": "full-time",
+        "posted": "2024-01-23",
+        "location": "Remote",
+        "skills": ["Python", "LangChain", "LangGraph", "LlamaIndex", "Hugging Face Transformers", "OpenAI API", "Streamlit", "Docker"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 170000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["remote work", "equity", "AI research budget", "conference stipend"],
+        "apply": "https://streamlineai.com/jobs/llm-developer/apply"
+      },
+      {
+        "position": "AI Engineer",
+        "title": "Generative AI Specialist",
+        "description": "Develop cutting-edge generative AI solutions using transformer models, diffusion models, and multimodal AI. Experience with fine-tuning and prompt engineering required.",
+        "url": "https://streamlineai.com/jobs/generative-ai-specialist",
+        "type": "full-time",
+        "posted": "2024-01-21",
+        "location": "Remote",
+        "skills": ["Python", "TensorFlow", "PyTorch", "Hugging Face Transformers", "BERT", "T5", "Stable Diffusion", "OpenAI API"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.025,
+          "to": 0.06
+        },
+        "perks": ["remote work", "stock options", "GPU access", "research publications"],
+        "apply": "https://streamlineai.com/jobs/generative-ai-specialist/apply"
+      },
+      {
+        "position": "MLOps Engineer",
+        "title": "ML Platform Engineer",
+        "description": "Build and maintain ML infrastructure using Docker, AWS, and CI/CD pipelines. Deploy models to production and monitor performance.",
+        "url": "https://streamlineai.com/jobs/mlops-engineer",
+        "type": "full-time",
+        "posted": "2024-01-16",
+        "location": "Remote",
+        "skills": ["Python", "Docker", "AWS", "GCP", "MLflow", "Kubeflow", "TensorFlow", "PyTorch"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 155000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.04
+        },
+        "perks": ["remote work", "health insurance", "learning budget", "flexible hours"],
+        "apply": "https://streamlineai.com/jobs/mlops-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "MobileFirst Solutions",
+    "url": "https://mobilefirst.dev",
+    "remoteFriendly": true,
+    "market": "Mobile Development",
+    "size": "75-250",
+    "jobs": [
+      {
+        "position": "Mobile Developer",
+        "title": "Flutter Developer",
+        "description": "Develop cross-platform mobile applications using Flutter/Dart. Experience with Firebase integration and app store deployment required.",
+        "url": "https://mobilefirst.dev/jobs/flutter-developer",
+        "type": "full-time",
+        "posted": "2024-01-13",
+        "location": "Remote",
+        "skills": ["Dart", "Flutter", "Firebase", "Android", "iOS", "Git", "REST APIs", "SQLite"],
+        "salaryRange": {
+          "from": 90000,
+          "to": 120000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.02
+        },
+        "perks": ["remote work", "health insurance", "device allowance", "app store fees covered"],
+        "apply": "https://mobilefirst.dev/jobs/flutter-developer/apply"
+      },
+      {
+        "position": "Backend Developer",
+        "title": "Node.js API Developer",
+        "description": "Build scalable backend APIs using Node.js and Express.js. Work with MongoDB and MySQL databases to support mobile applications.",
+        "url": "https://mobilefirst.dev/jobs/nodejs-developer",
+        "type": "full-time",
+        "posted": "2024-01-11",
+        "location": "Remote",
+        "skills": ["Node.js", "Express.js", "JavaScript", "MongoDB", "MySQL", "REST APIs", "JWT", "AWS"],
+        "salaryRange": {
+          "from": 85000,
+          "to": 115000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["remote work", "health insurance", "learning stipend", "flexible schedule"],
+        "apply": "https://mobilefirst.dev/jobs/nodejs-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "DesignTech Studios",
+    "url": "https://designtech.studio",
+    "remoteFriendly": true,
+    "market": "Design & Development",
+    "size": "30-100",
+    "jobs": [
+      {
+        "position": "Frontend Developer",
+        "title": "React UI/UX Developer",
+        "description": "Create beautiful, responsive user interfaces using React.js, Tailwind CSS, and modern design principles. Collaborate with designers using Figma.",
+        "url": "https://designtech.studio/jobs/react-ui-developer",
+        "type": "full-time",
+        "posted": "2024-01-24",
+        "location": "Remote",
+        "skills": ["React.js", "JavaScript", "Tailwind CSS", "HTML5", "CSS3", "Figma", "Git", "Responsive Design"],
+        "salaryRange": {
+          "from": 80000,
+          "to": 110000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["remote work", "design tools subscription", "health insurance", "creative freedom"],
+        "apply": "https://designtech.studio/jobs/react-ui-developer/apply"
+      },
+      {
+        "position": "Web Developer",
+        "title": "Full Stack Web Developer",
+        "description": "Build complete web applications from design to deployment. Use modern frameworks and deploy on Vercel. Experience with design tools like Canva is a plus.",
+        "url": "https://designtech.studio/jobs/fullstack-web-developer",
+        "type": "full-time",
+        "posted": "2024-01-20",
+        "location": "Remote",
+        "skills": ["HTML5", "CSS3", "JavaScript", "React.js", "Node.js", "MongoDB", "Vercel", "Canva"],
+        "salaryRange": {
+          "from": 75000,
+          "to": 105000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.003,
+          "to": 0.01
+        },
+        "perks": ["remote work", "project variety", "health insurance", "portfolio building"],
+        "apply": "https://designtech.studio/jobs/fullstack-web-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "DataFlow Analytics",
+    "url": "https://dataflow.analytics",
+    "remoteFriendly": false,
+    "market": "Data Science & Analytics",
+    "size": "100-300",
+    "jobs": [
+      {
+        "position": "Data Scientist",
+        "title": "Python Data Scientist",
+        "description": "Perform exploratory data analysis, build machine learning models, and create data visualizations. Strong Python skills and experience with scikit-learn required.",
+        "url": "https://dataflow.analytics/jobs/python-data-scientist",
+        "type": "full-time",
+        "posted": "2024-01-26",
+        "location": "Austin, TX",
+        "skills": ["Python", "scikit-learn", "pandas", "numpy", "matplotlib", "seaborn", "Jupyter", "SQL"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 145000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.025
+        },
+        "perks": ["health insurance", "401k matching", "data science conferences", "research time"],
+        "apply": "https://dataflow.analytics/jobs/python-data-scientist/apply"
+      },
+      {
+        "position": "Machine Learning Engineer",
+        "title": "Deep Learning Engineer",
+        "description": "Design and implement deep learning models using TensorFlow and Keras. Work on computer vision and NLP projects for enterprise clients.",
+        "url": "https://dataflow.analytics/jobs/deep-learning-engineer",
+        "type": "full-time",
+        "posted": "2024-01-18",
+        "location": "Seattle, WA",
+        "skills": ["Python", "TensorFlow", "Keras", "Deep Learning", "Computer Vision", "NLP", "GPU Computing", "Docker"],
+        "salaryRange": {
+          "from": 135000,
+          "to": 175000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["health insurance", "GPU workstations", "conference budget", "research publications"],
+        "apply": "https://dataflow.analytics/jobs/deep-learning-engineer/apply"
+      },
+      {
+        "position": "Data Engineer",
+        "title": "Python Data Pipeline Engineer",
+        "description": "Build and maintain data pipelines using Python, SQL, and cloud platforms. Experience with ETL processes and database optimization required.",
+        "url": "https://dataflow.analytics/jobs/data-pipeline-engineer",
+        "type": "full-time",
+        "posted": "2024-01-15",
+        "location": "Denver, CO",
+        "skills": ["Python", "SQL", "MySQL", "MongoDB", "ETL", "Apache Airflow", "AWS", "Data Warehousing"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 135000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.008,
+          "to": 0.02
+        },
+        "perks": ["health insurance", "remote work options", "learning budget", "stock options"],
+        "apply": "https://dataflow.analytics/jobs/data-pipeline-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "AgentFlow Systems",
+    "url": "https://agentflow.systems",
+    "remoteFriendly": true,
+    "market": "AI Agents & Automation",
+    "size": "15-60",
+    "jobs": [
+      {
+        "position": "AI Agent Developer",
+        "title": "Multi-Agent Systems Engineer",
+        "description": "Develop intelligent agent systems using Smolagents and LangGraph. Create autonomous workflows and multi-agent orchestration platforms.",
+        "url": "https://agentflow.systems/jobs/agent-developer",
+        "type": "full-time",
+        "posted": "2024-01-27",
+        "location": "Remote",
+        "skills": ["Python", "Smolagents", "LangChain", "LangGraph", "Multi-Agent Systems", "AI Orchestration", "API Integration", "Docker"],
+        "salaryRange": {
+          "from": 145000,
+          "to": 185000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.03,
+          "to": 0.07
+        },
+        "perks": ["remote work", "cutting-edge AI research", "high equity", "conference speaking opportunities"],
+        "apply": "https://agentflow.systems/jobs/agent-developer/apply"
+      },
+      {
+        "position": "AI Research Engineer",
+        "title": "Agentic AI Research Scientist",
+        "description": "Research and develop next-generation AI agent architectures. Work on reinforcement learning, planning, and reasoning systems.",
+        "url": "https://agentflow.systems/jobs/ai-research-engineer",
+        "type": "full-time",
+        "posted": "2024-01-22",
+        "location": "Remote",
+        "skills": ["Python", "Reinforcement Learning", "LangChain", "Smolagents", "PyTorch", "Planning Algorithms", "Multi-Agent RL", "Research"],
+        "salaryRange": {
+          "from": 155000,
+          "to": 200000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.04,
+          "to": 0.08
+        },
+        "perks": ["remote work", "research publications", "patent opportunities", "AI conference budget"],
+        "apply": "https://agentflow.systems/jobs/ai-research-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "CodeCraft Solutions",
+    "url": "https://codecraft.solutions",
+    "remoteFriendly": true,
+    "market": "Software Consulting",
+    "size": "50-150",
+    "jobs": [
+      {
+        "position": "Software Developer",
+        "title": "Multi-Language Developer",
+        "description": "Work on diverse client projects using Python, C++, Java, and JavaScript. Strong problem-solving skills and ability to learn new technologies quickly.",
+        "url": "https://codecraft.solutions/jobs/multi-language-developer",
+        "type": "full-time",
+        "posted": "2024-01-19",
+        "location": "Remote",
+        "skills": ["Python", "C++", "Java", "JavaScript", "C", "Problem Solving", "Algorithm Design", "Git"],
+        "salaryRange": {
+          "from": 90000,
+          "to": 125000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.02
+        },
+        "perks": ["remote work", "diverse projects", "skill development", "client interaction"],
+        "apply": "https://codecraft.solutions/jobs/multi-language-developer/apply"
+      },
+      {
+        "position": "Backend Developer",
+        "title": "Systems Programming Specialist",
+        "description": "Build high-performance backend systems using C, C++, and Python. Work on system-level programming and optimization projects.",
+        "url": "https://codecraft.solutions/jobs/systems-programmer",
+        "type": "full-time",
+        "posted": "2024-01-17",
+        "location": "Remote",
+        "skills": ["C", "C++", "Python", "System Programming", "Performance Optimization", "Linux", "Memory Management", "Debugging"],
+        "salaryRange": {
+          "from": 105000,
+          "to": 140000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.008,
+          "to": 0.025
+        },
+        "perks": ["remote work", "technical challenges", "performance bonuses", "learning opportunities"],
+        "apply": "https://codecraft.solutions/jobs/systems-programmer/apply"
+      }
+    ]
+  },
+  {
+    "company": "StreamlineApps",
+    "url": "https://streamlineapps.io",
+    "remoteFriendly": true,
+    "market": "Application Development",
+    "size": "20-80",
+    "jobs": [
+      {
+        "position": "Application Developer",
+        "title": "Streamlit Application Developer",
+        "description": "Create interactive data applications and dashboards using Streamlit. Build tools for data visualization and machine learning model deployment.",
+        "url": "https://streamlineapps.io/jobs/streamlit-developer",
+        "type": "full-time",
+        "posted": "2024-01-25",
+        "location": "Remote",
+        "skills": ["Python", "Streamlit", "Data Visualization", "Machine Learning", "pandas", "plotly", "scikit-learn", "Docker"],
+        "salaryRange": {
+          "from": 85000,
+          "to": 115000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.025
+        },
+        "perks": ["remote work", "data science focus", "creative projects", "flexible hours"],
+        "apply": "https://streamlineapps.io/jobs/streamlit-developer/apply"
+      },
+      {
+        "position": "Web Developer",
+        "title": "Full Stack Web Developer",
+        "description": "Build full stack web applications using React.js, Node.js, and MongoDB. Experience with REST APIs and cloud deployment is a plus.",
+        "url": "https://streamlineapps.io/jobs/fullstack-web-developer",
+        "type": "full-time",
+        "posted": "2024-01-21",
+        "location": "Remote",
+        "skills": ["React.js", "Node.js", "MongoDB", "JavaScript", "HTML5", "CSS3", "REST APIs", "Git"],
+        "salaryRange": {
+          "from": 90000,
+          "to": 120000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["remote work", "health insurance", "learning budget", "team retreats"],
+        "apply": "https://streamlineapps.io/jobs/fullstack-web-developer/apply"
+      },
+      {
+        "position": "Mobile Developer",
+        "title": "Flutter Mobile Developer",
+        "description": "Develop cross-platform mobile applications using Flutter and Dart. Experience with Firebase integration and app store deployment is required.",
+        "url": "https://streamlineapps.io/jobs/flutter-mobile-developer",
+        "type": "full-time",
+        "posted": "2024-01-18",
+        "location": "Remote",
+        "skills": ["Dart", "Flutter", "Firebase", "Android", "iOS", "Git", "REST APIs", "SQLite"],
+        "salaryRange": {
+          "from": 95000,
+          "to": 125000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.02
+        },
+        "perks": ["remote work", "device allowance", "health insurance", "app store fees covered"],
+        "apply": "https://streamlineapps.io/jobs/flutter-mobile-developer/apply"
+      },
+      {
+        "position": "Backend Developer",
+        "title": "Node.js Backend Developer",
+        "description": "Build scalable backend systems using Node.js and Express.js. Work with MongoDB and MySQL databases to support web and mobile applications.",
+        "url": "https://streamlineapps.io/jobs/nodejs-backend-developer",
+        "type": "full-time",
+        "posted": "2024-01-15",
+        "location": "Remote",
+        "skills": ["Node.js", "Express.js", "JavaScript", "MongoDB", "MySQL", "REST APIs", "JWT", "AWS"],
+        "salaryRange": {
+          "from": 90000,
+          "to": 120000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.005,
+          "to": 0.015
+        },
+        "perks": ["remote work", "health insurance", "learning stipend", "flexible schedule"],
+        "apply": "https://streamlineapps.io/jobs/nodejs-backend-developer/apply"
+      },
+      {
+        "position": "Data Engineer",
+        "title": "Python Data Engineer",
+        "description": "Build and maintain data pipelines using Python, SQL, and cloud platforms. Experience with ETL processes and database optimization required.",
+        "url": "https://streamlineapps.io/jobs/python-data-engineer",
+        "type": "full-time",
+        "posted": "2024-01-12",
+        "location": "Remote",
+        "skills": ["Python", "SQL", "MySQL", "MongoDB", "ETL", "Apache Airflow", "AWS", "Data Warehousing"],
+        "salaryRange": {
+          "from": 95000,
+          "to": 125000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.008,
+          "to": 0.02
+        },
+        "perks": ["remote work", "health insurance", "learning budget", "stock options"],
+        "apply": "https://streamlineapps.io/jobs/python-data-engineer/apply"
+      },
+      {
+        "position": "AI Engineer",
+        "title": "AI Application Developer",
+        "description": "Develop AI applications using LangChain, LangGraph, and LlamaIndex. Focus on conversational AI and document processing systems.",
+        "url": "https://streamlineapps.io/jobs/ai-application-developer",
+        "type": "full-time",
+        "posted": "2024-01-10",
+        "location": "Remote",
+        "skills": ["Python", "LangChain", "LangGraph", "LlamaIndex", "Hugging Face Transformers", "OpenAI API", "Streamlit", "Docker"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["remote work", "AI research budget", "conference stipend", "flexible hours"],
+        "apply": "https://streamlineapps.io/jobs/ai-application-developer/apply"
+      },
+      {
+        "position": "Data Visualization Developer",
+        "title": "Interactive Dashboard Developer",
+        "description": "Build interactive dashboards and data visualization tools. Work with various data sources and create compelling UI/UX with Streamlit and Tailwind.",
+        "url": "https://streamlineapps.io/jobs/dashboard-dev",
+        "type": "full-time",
+        "posted": "2024-01-28",
+        "location": "Remote",
+        "skills": ["Python", "Streamlit", "Tailwind", "React.js", "Data Visualization", "MongoDB", "GitHub", "Plotly"],
+        "salaryRange": {
+          "from": 88000,
+          "to": 120000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.02
+        },
+        "perks": ["remote work", "research allowance", "design freedom", "learning stipend"],
+        "apply": "https://streamlineapps.io/jobs/dashboard-dev/apply"
+      }
+    ]
+  },
+  {
+    "company": "NeuroNet AI",
+    "url": "https://neuronet.ai",
+    "remoteFriendly": true,
+    "market": "AI Research & Development",
+    "size": "20-100",
+    "jobs": [
+      {
+        "position": "AI Engineer",
+        "title": "LLM Fine-Tuning Specialist",
+        "description": "Work on customizing Large Language Models using Hugging Face, LangChain, and in-house datasets. Focus on prompt engineering, embeddings, and RAG pipelines.",
+        "url": "https://neuronet.ai/jobs/llm-specialist",
+        "type": "full-time",
+        "posted": "2024-01-27",
+        "location": "Remote",
+        "skills": ["Python", "Hugging Face Transformers", "LangChain", "LLMs", "Prompt Engineering", "PyTorch", "Docker"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.025,
+          "to": 0.05
+        },
+        "perks": ["remote work", "GPU credits", "research time", "publication support"],
+        "apply": "https://neuronet.ai/jobs/llm-specialist/apply"
+      }
+    ]
+  },
+  {
+    "company": "DevBoost Labs",
+    "url": "https://devboostlabs.com",
+    "remoteFriendly": true,
+    "market": "Full Stack Development",
+    "size": "50-200",
+    "jobs": [
+      {
+        "position": "Full Stack Developer",
+        "title": "React & Flask Developer",
+        "description": "Build production-ready web apps using React.js, Tailwind, and Flask. Bonus if you have experience with MongoDB and Vercel deployment.",
+        "url": "https://devboostlabs.com/jobs/fullstack-developer",
+        "type": "full-time",
+        "posted": "2024-02-02",
+        "location": "Remote",
+        "skills": ["React.js", "Tailwind", "Flask", "MongoDB", "Vercel", "GitHub", "JavaScript"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 135000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.03
+        },
+        "perks": ["remote work", "startup environment", "flexible schedule", "tech stipend"],
+        "apply": "https://devboostlabs.com/jobs/fullstack-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "PromptAI Works",
+    "url": "https://promptai.works",
+    "remoteFriendly": true,
+    "market": "Generative AI & NLP",
+    "size": "15-75",
+    "jobs": [
+      {
+        "position": "AI Prompt Engineer",
+        "title": "Prompt Engineering and RAG Developer",
+        "description": "Design optimized prompts for GPT-based applications. Build document understanding pipelines using LangChain and LlamaIndex.",
+        "url": "https://promptai.works/jobs/prompt-engineer",
+        "type": "full-time",
+        "posted": "2024-02-01",
+        "location": "Remote",
+        "skills": ["Python", "Prompt Engineering", "LangChain", "LlamaIndex", "RAG", "T5", "BERT", "Docker"],
+        "salaryRange": {
+          "from": 125000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.03
+        },
+        "perks": ["remote work", "cutting-edge tech", "AI research opportunities", "flexible hours"],
+        "apply": "https://promptai.works/jobs/prompt-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "TensorForge Analytics",
+    "url": "https://tensorforge.ai",
+    "remoteFriendly": true,
+    "market": "AI & Data Platforms",
+    "size": "40-120",
+    "jobs": [
+      {
+        "position": "MLOps Engineer",
+        "title": "Cloud ML Engineer",
+        "description": "Deploy ML models at scale using AWS, GCP, and Docker. Implement CI/CD pipelines, automate training workflows, and monitor real-time performance.",
+        "url": "https://tensorforge.ai/jobs/mlops-engineer",
+        "type": "full-time",
+        "posted": "2024-02-03",
+        "location": "Remote",
+        "skills": ["Python", "AWS", "GCP", "Docker", "MLflow", "TensorFlow", "PyTorch", "CI/CD"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 170000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.04
+        },
+        "perks": ["remote work", "research credits", "compute stipend", "on-call bonuses"],
+        "apply": "https://tensorforge.ai/jobs/mlops-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "CyberSec Solutions",
+    "url": "https://cybersec.solutions",
+    "remoteFriendly": true,
+    "market": "Cybersecurity",
+    "size": "100-500",
+    "jobs": [
+      {
+        "position": "Security Engineer",
+        "title": "Application Security Engineer",
+        "description": "Implement security best practices in web applications. Conduct security audits, penetration testing, and code reviews.",
+        "url": "https://cybersec.solutions/jobs/appsec-engineer",
+        "type": "full-time",
+        "posted": "2024-02-05",
+        "location": "Remote",
+        "skills": ["Python", "JavaScript", "OWASP", "Penetration Testing", "Code Review", "Security Tools", "Docker"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.025
+        },
+        "perks": ["remote work", "security certifications", "hacking lab access", "conference budget"],
+        "apply": "https://cybersec.solutions/jobs/appsec-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "BlockchainTech",
+    "url": "https://blockchaintech.io",
+    "remoteFriendly": true,
+    "market": "Blockchain & Web3",
+    "size": "50-200",
+    "jobs": [
+      {
+        "position": "Blockchain Developer",
+        "title": "Smart Contract Developer",
+        "description": "Develop and audit smart contracts using Solidity. Experience with Ethereum, DeFi protocols, and Web3.js required.",
+        "url": "https://blockchaintech.io/jobs/smart-contract-dev",
+        "type": "full-time",
+        "posted": "2024-02-06",
+        "location": "Remote",
+        "skills": ["Solidity", "Ethereum", "Web3.js", "DeFi", "Smart Contracts", "JavaScript", "Git"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["remote work", "crypto bonuses", "conference travel", "research time"],
+        "apply": "https://blockchaintech.io/jobs/smart-contract-dev/apply"
+      },
+      {
+        "position": "Full Stack Developer",
+        "title": "Web3 Frontend Developer",
+        "description": "Build decentralized applications using React, Web3.js, and blockchain integration. Experience with MetaMask and wallet connections.",
+        "url": "https://blockchaintech.io/jobs/web3-frontend",
+        "type": "full-time",
+        "posted": "2024-02-07",
+        "location": "Remote",
+        "skills": ["React", "Web3.js", "Ethereum", "MetaMask", "JavaScript", "CSS", "Blockchain"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 140000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "crypto bonuses", "learning budget", "flexible hours"],
+        "apply": "https://blockchaintech.io/jobs/web3-frontend/apply"
+      }
+    ]
+  },
+  {
+    "company": "GameDev Studios",
+    "url": "https://gamedev.studios",
+    "remoteFriendly": true,
+    "market": "Game Development",
+    "size": "75-300",
+    "jobs": [
+      {
+        "position": "Game Developer",
+        "title": "Unity Game Developer",
+        "description": "Create engaging mobile and PC games using Unity and C#. Experience with game physics, AI, and multiplayer networking.",
+        "url": "https://gamedev.studios/jobs/unity-developer",
+        "type": "full-time",
+        "posted": "2024-02-08",
+        "location": "Remote",
+        "skills": ["Unity", "C#", "Game Development", "3D Graphics", "Game Physics", "AI", "Networking"],
+        "salaryRange": {
+          "from": 80000,
+          "to": 120000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.025
+        },
+        "perks": ["remote work", "game credits", "hardware allowance", "creative freedom"],
+        "apply": "https://gamedev.studios/jobs/unity-developer/apply"
+      },
+      {
+        "position": "Game Developer",
+        "title": "Unreal Engine Developer",
+        "description": "Develop high-quality 3D games using Unreal Engine and C++. Focus on performance optimization and visual effects.",
+        "url": "https://gamedev.studios/jobs/unreal-developer",
+        "type": "full-time",
+        "posted": "2024-02-09",
+        "location": "Remote",
+        "skills": ["Unreal Engine", "C++", "3D Graphics", "Blueprints", "Performance", "Visual Effects", "Game Engine"],
+        "salaryRange": {
+          "from": 90000,
+          "to": 130000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.012,
+          "to": 0.03
+        },
+        "perks": ["remote work", "game credits", "hardware upgrades", "conference budget"],
+        "apply": "https://gamedev.studios/jobs/unreal-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "IoT Innovations",
+    "url": "https://iotinnovations.com",
+    "remoteFriendly": false,
+    "market": "Internet of Things",
+    "size": "100-400",
+    "jobs": [
+      {
+        "position": "IoT Engineer",
+        "title": "Embedded Systems Engineer",
+        "description": "Design and develop IoT devices using microcontrollers, sensors, and wireless communication protocols.",
+        "url": "https://iotinnovations.com/jobs/embedded-engineer",
+        "type": "full-time",
+        "posted": "2024-02-10",
+        "location": "Austin, TX",
+        "skills": ["C", "C++", "Microcontrollers", "IoT", "Wireless Protocols", "Embedded Systems", "Python"],
+        "salaryRange": {
+          "from": 95000,
+          "to": 130000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.008,
+          "to": 0.02
+        },
+        "perks": ["health insurance", "hardware lab access", "learning budget", "flexible hours"],
+        "apply": "https://iotinnovations.com/jobs/embedded-engineer/apply"
+      },
+      {
+        "position": "Data Engineer",
+        "title": "IoT Data Pipeline Engineer",
+        "description": "Build scalable data pipelines for IoT sensor data using Python, Apache Kafka, and cloud platforms.",
+        "url": "https://iotinnovations.com/jobs/iot-data-engineer",
+        "type": "full-time",
+        "posted": "2024-02-11",
+        "location": "Austin, TX",
+        "skills": ["Python", "Apache Kafka", "AWS", "IoT", "Data Pipelines", "SQL", "Docker"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 135000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.025
+        },
+        "perks": ["health insurance", "IoT lab access", "learning budget", "flexible hours"],
+        "apply": "https://iotinnovations.com/jobs/iot-data-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "Quantum Computing Labs",
+    "url": "https://quantumlabs.com",
+    "remoteFriendly": false,
+    "market": "Quantum Computing",
+    "size": "25-100",
+    "jobs": [
+      {
+        "position": "Quantum Engineer",
+        "title": "Quantum Algorithm Developer",
+        "description": "Develop quantum algorithms using Qiskit and Cirq. Research quantum machine learning and optimization problems.",
+        "url": "https://quantumlabs.com/jobs/quantum-algorithm-dev",
+        "type": "full-time",
+        "posted": "2024-02-12",
+        "location": "Boston, MA",
+        "skills": ["Python", "Qiskit", "Cirq", "Quantum Computing", "Linear Algebra", "Machine Learning", "Research"],
+        "salaryRange": {
+          "from": 150000,
+          "to": 200000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.03,
+          "to": 0.08
+        },
+        "perks": ["quantum lab access", "research publications", "conference travel", "patent opportunities"],
+        "apply": "https://quantumlabs.com/jobs/quantum-algorithm-dev/apply"
+      }
+    ]
+  },
+  {
+    "company": "Robotics Dynamics",
+    "url": "https://roboticsdynamics.io",
+    "remoteFriendly": false,
+    "market": "Robotics & Automation",
+    "size": "150-600",
+    "jobs": [
+      {
+        "position": "Robotics Engineer",
+        "title": "ROS Developer",
+        "description": "Develop robotic systems using ROS (Robot Operating System). Experience with Python, C++, and robotics simulation.",
+        "url": "https://roboticsdynamics.io/jobs/ros-developer",
+        "type": "full-time",
+        "posted": "2024-02-13",
+        "location": "Pittsburgh, PA",
+        "skills": ["ROS", "Python", "C++", "Robotics", "Simulation", "Computer Vision", "Control Systems"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["robotics lab access", "hardware allowance", "conference budget", "research time"],
+        "apply": "https://roboticsdynamics.io/jobs/ros-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "Edge Computing Solutions",
+    "url": "https://edgecomputing.solutions",
+    "remoteFriendly": true,
+    "market": "Edge Computing & 5G",
+    "size": "200-800",
+    "jobs": [
+      {
+        "position": "Network Engineer",
+        "title": "5G Network Engineer",
+        "description": "Design and optimize 5G network infrastructure. Experience with network protocols, virtualization, and edge computing.",
+        "url": "https://edgecomputing.solutions/jobs/5g-engineer",
+        "type": "full-time",
+        "posted": "2024-02-14",
+        "location": "Remote",
+        "skills": ["5G", "Networking", "Virtualization", "Edge Computing", "Python", "Linux", "Docker"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.025
+        },
+        "perks": ["remote work", "network lab access", "certification budget", "flexible hours"],
+        "apply": "https://edgecomputing.solutions/jobs/5g-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "BioTech Innovations",
+    "url": "https://biotechinnovations.com",
+    "remoteFriendly": false,
+    "market": "Biotechnology & Bioinformatics",
+    "size": "75-250",
+    "jobs": [
+      {
+        "position": "Bioinformatics Engineer",
+        "title": "Computational Biologist",
+        "description": "Analyze genomic data using Python, R, and bioinformatics tools. Develop algorithms for biological data processing.",
+        "url": "https://biotechinnovations.com/jobs/computational-biologist",
+        "type": "full-time",
+        "posted": "2024-02-15",
+        "location": "San Diego, CA",
+        "skills": ["Python", "R", "Bioinformatics", "Genomics", "Machine Learning", "Statistics", "Linux"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 170000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["lab access", "research publications", "conference travel", "health benefits"],
+        "apply": "https://biotechinnovations.com/jobs/computational-biologist/apply"
+      },
+      {
+        "position": "Data Scientist",
+        "title": "Clinical Data Analyst",
+        "description": "Analyze clinical trial data using statistical methods and machine learning. Experience with SAS, R, and clinical databases.",
+        "url": "https://biotechinnovations.com/jobs/clinical-data-analyst",
+        "type": "full-time",
+        "posted": "2024-02-16",
+        "location": "San Diego, CA",
+        "skills": ["R", "SAS", "Statistics", "Clinical Data", "Machine Learning", "SQL", "Data Visualization"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["lab access", "health benefits", "learning budget", "flexible hours"],
+        "apply": "https://biotechinnovations.com/jobs/clinical-data-analyst/apply"
+      }
+    ]
+  },
+  {
+    "company": "FinTech Solutions",
+    "url": "https://fintechsolutions.com",
+    "remoteFriendly": true,
+    "market": "Financial Technology",
+    "size": "300-1000",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Quantitative Developer",
+        "description": "Build high-frequency trading systems using C++, Python, and financial algorithms. Experience with market data and risk management.",
+        "url": "https://fintechsolutions.com/jobs/quant-dev",
+        "type": "full-time",
+        "posted": "2024-02-17",
+        "location": "Remote",
+        "skills": ["C++", "Python", "Financial Algorithms", "High-Frequency Trading", "Market Data", "Risk Management", "Linux"],
+        "salaryRange": {
+          "from": 150000,
+          "to": 250000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.06
+        },
+        "perks": ["remote work", "performance bonuses", "trading access", "conference budget"],
+        "apply": "https://fintechsolutions.com/jobs/quant-dev/apply"
+      },
+      {
+        "position": "Data Engineer",
+        "title": "Financial Data Engineer",
+        "description": "Build data pipelines for financial market data using Python, Apache Kafka, and cloud platforms.",
+        "url": "https://fintechsolutions.com/jobs/financial-data-engineer",
+        "type": "full-time",
+        "posted": "2024-02-18",
+        "location": "Remote",
+        "skills": ["Python", "Apache Kafka", "AWS", "Financial Data", "SQL", "Docker", "ETL"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "health insurance", "learning budget", "flexible hours"],
+        "apply": "https://fintechsolutions.com/jobs/financial-data-engineer/apply"
+      },
+      {
+        "position": "Frontend Developer",
+        "title": "Trading Platform Developer",
+        "description": "Build real-time trading dashboards using React, WebSocket, and financial charting libraries.",
+        "url": "https://fintechsolutions.com/jobs/trading-platform-dev",
+        "type": "full-time",
+        "posted": "2024-02-19",
+        "location": "Remote",
+        "skills": ["React", "WebSocket", "Financial Charts", "TypeScript", "Real-time Data", "Trading APIs"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.025
+        },
+        "perks": ["remote work", "trading access", "health insurance", "performance bonuses"],
+        "apply": "https://fintechsolutions.com/jobs/trading-platform-dev/apply"
+      }
+    ]
+  },
+  {
+    "company": "HealthTech Systems",
+    "url": "https://healthtech.systems",
+    "remoteFriendly": true,
+    "market": "Healthcare Technology",
+    "size": "500-2000",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Healthcare API Developer",
+        "description": "Build HIPAA-compliant healthcare APIs using Python, FastAPI, and PostgreSQL. Experience with FHIR standards required.",
+        "url": "https://healthtech.systems/jobs/healthcare-api-dev",
+        "type": "full-time",
+        "posted": "2024-02-20",
+        "location": "Remote",
+        "skills": ["Python", "FastAPI", "PostgreSQL", "HIPAA", "FHIR", "Healthcare", "Docker"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.025
+        },
+        "perks": ["remote work", "health insurance", "HIPAA training", "flexible hours"],
+        "apply": "https://healthtech.systems/jobs/healthcare-api-dev/apply"
+      },
+      {
+        "position": "Data Scientist",
+        "title": "Medical AI Researcher",
+        "description": "Develop AI models for medical image analysis and diagnosis. Experience with PyTorch, medical imaging, and clinical validation.",
+        "url": "https://healthtech.systems/jobs/medical-ai-researcher",
+        "type": "full-time",
+        "posted": "2024-02-21",
+        "location": "Remote",
+        "skills": ["Python", "PyTorch", "Medical Imaging", "Computer Vision", "Clinical Validation", "Research"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["remote work", "research publications", "conference travel", "clinical collaboration"],
+        "apply": "https://healthtech.systems/jobs/medical-ai-researcher/apply"
+      }
+    ]
+  },
+  {
+    "company": "EduTech Platforms",
+    "url": "https://edutech.platforms",
+    "remoteFriendly": true,
+    "market": "Educational Technology",
+    "size": "200-800",
+    "jobs": [
+      {
+        "position": "Full Stack Developer",
+        "title": "Learning Platform Developer",
+        "description": "Build educational platforms using React, Node.js, and MongoDB. Experience with gamification and adaptive learning algorithms.",
+        "url": "https://edutech.platforms/jobs/learning-platform-dev",
+        "type": "full-time",
+        "posted": "2024-02-22",
+        "location": "Remote",
+        "skills": ["React", "Node.js", "MongoDB", "Gamification", "Adaptive Learning", "JavaScript", "Education"],
+        "salaryRange": {
+          "from": 95000,
+          "to": 130000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.01,
+          "to": 0.025
+        },
+        "perks": ["remote work", "education benefits", "learning budget", "flexible hours"],
+        "apply": "https://edutech.platforms/jobs/learning-platform-dev/apply"
+      },
+      {
+        "position": "Data Scientist",
+        "title": "Educational Data Analyst",
+        "description": "Analyze student performance data to improve learning outcomes. Experience with educational analytics and predictive modeling.",
+        "url": "https://edutech.platforms/jobs/educational-data-analyst",
+        "type": "full-time",
+        "posted": "2024-02-23",
+        "location": "Remote",
+        "skills": ["Python", "R", "Educational Analytics", "Predictive Modeling", "Statistics", "Data Visualization"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 140000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.012,
+          "to": 0.03
+        },
+        "perks": ["remote work", "education benefits", "research time", "conference budget"],
+        "apply": "https://edutech.platforms/jobs/educational-data-analyst/apply"
+      }
+    ]
+  },
+  {
+    "company": "GreenTech Energy",
+    "url": "https://greentech.energy",
+    "remoteFriendly": true,
+    "market": "Renewable Energy & Sustainability",
+    "size": "150-500",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Energy Management System Developer",
+        "description": "Build software for monitoring and optimizing renewable energy systems. Experience with IoT, data analytics, and energy markets.",
+        "url": "https://greentech.energy/jobs/energy-system-dev",
+        "type": "full-time",
+        "posted": "2024-02-24",
+        "location": "Remote",
+        "skills": ["Python", "IoT", "Data Analytics", "Energy Markets", "Machine Learning", "Cloud Platforms"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "sustainability focus", "energy credits", "flexible hours"],
+        "apply": "https://greentech.energy/jobs/energy-system-dev/apply"
+      }
+    ]
+  },
+  {
+    "company": "SpaceTech Ventures",
+    "url": "https://spacetech.ventures",
+    "remoteFriendly": false,
+    "market": "Space Technology & Aerospace",
+    "size": "50-200",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Satellite Software Engineer",
+        "description": "Develop software for satellite operations and ground control systems. Experience with embedded systems and real-time processing.",
+        "url": "https://spacetech.ventures/jobs/satellite-software-engineer",
+        "type": "full-time",
+        "posted": "2024-02-25",
+        "location": "Houston, TX",
+        "skills": ["C++", "Python", "Embedded Systems", "Real-time Processing", "Satellite Operations", "Linux"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.06
+        },
+        "perks": ["space lab access", "launch viewing", "research time", "conference travel"],
+        "apply": "https://spacetech.ventures/jobs/satellite-software-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "AR/VR Studios",
+    "url": "https://arvr.studios",
+    "remoteFriendly": true,
+    "market": "Augmented & Virtual Reality",
+    "size": "100-400",
+    "jobs": [
+      {
+        "position": "AR/VR Developer",
+        "title": "Unity AR Developer",
+        "description": "Create augmented reality applications using Unity, ARKit, and ARCore. Experience with 3D graphics and computer vision.",
+        "url": "https://arvr.studios/jobs/unity-ar-developer",
+        "type": "full-time",
+        "posted": "2024-02-26",
+        "location": "Remote",
+        "skills": ["Unity", "ARKit", "ARCore", "C#", "3D Graphics", "Computer Vision", "AR Development"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 140000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.012,
+          "to": 0.03
+        },
+        "perks": ["remote work", "AR/VR hardware", "creative freedom", "conference budget"],
+        "apply": "https://arvr.studios/jobs/unity-ar-developer/apply"
+      },
+      {
+        "position": "VR Developer",
+        "title": "Unreal VR Developer",
+        "description": "Build immersive virtual reality experiences using Unreal Engine. Focus on performance optimization and user experience.",
+        "url": "https://arvr.studios/jobs/unreal-vr-developer",
+        "type": "full-time",
+        "posted": "2024-02-27",
+        "location": "Remote",
+        "skills": ["Unreal Engine", "C++", "VR Development", "3D Graphics", "Performance Optimization", "User Experience"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "VR hardware", "creative projects", "flexible hours"],
+        "apply": "https://arvr.studios/jobs/unreal-vr-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "CyberDefense Systems",
+    "url": "https://cyberdefense.systems",
+    "remoteFriendly": true,
+    "market": "Cybersecurity & Defense",
+    "size": "200-800",
+    "jobs": [
+      {
+        "position": "Security Engineer",
+        "title": "Threat Intelligence Analyst",
+        "description": "Analyze cybersecurity threats and develop defensive strategies. Experience with SIEM tools, threat hunting, and incident response.",
+        "url": "https://cyberdefense.systems/jobs/threat-intelligence-analyst",
+        "type": "full-time",
+        "posted": "2024-02-28",
+        "location": "Remote",
+        "skills": ["SIEM", "Threat Hunting", "Incident Response", "Python", "Cybersecurity", "Network Security"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 170000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "security certifications", "threat lab access", "conference budget"],
+        "apply": "https://cyberdefense.systems/jobs/threat-intelligence-analyst/apply"
+      },
+      {
+        "position": "Security Engineer",
+        "title": "Penetration Tester",
+        "description": "Conduct security assessments and penetration testing for web applications and networks. Experience with ethical hacking tools and methodologies.",
+        "url": "https://cyberdefense.systems/jobs/penetration-tester",
+        "type": "full-time",
+        "posted": "2024-02-29",
+        "location": "Remote",
+        "skills": ["Penetration Testing", "Ethical Hacking", "Web Security", "Network Security", "Python", "Security Tools"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.012,
+          "to": 0.03
+        },
+        "perks": ["remote work", "security certifications", "hacking lab access", "conference budget"],
+        "apply": "https://cyberdefense.systems/jobs/penetration-tester/apply"
+      }
+    ]
+  },
+  {
+    "company": "AutoDrive Technologies",
+    "url": "https://autodrive.tech",
+    "remoteFriendly": false,
+    "market": "Autonomous Vehicles & Transportation",
+    "size": "500-2000",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Autonomous Vehicle Software Engineer",
+        "description": "Develop software for self-driving cars using C++, Python, and robotics algorithms. Experience with computer vision and sensor fusion.",
+        "url": "https://autodrive.tech/jobs/autonomous-vehicle-engineer",
+        "type": "full-time",
+        "posted": "2024-03-01",
+        "location": "Palo Alto, CA",
+        "skills": ["C++", "Python", "Robotics", "Computer Vision", "Sensor Fusion", "Machine Learning", "Autonomous Systems"],
+        "salaryRange": {
+          "from": 150000,
+          "to": 200000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.06
+        },
+        "perks": ["autonomous vehicle access", "research time", "conference travel", "health benefits"],
+        "apply": "https://autodrive.tech/jobs/autonomous-vehicle-engineer/apply"
+      },
+      {
+        "position": "Computer Vision Engineer",
+        "title": "Perception Engineer",
+        "description": "Develop computer vision algorithms for autonomous vehicle perception. Experience with OpenCV, PyTorch, and sensor data processing.",
+        "url": "https://autodrive.tech/jobs/perception-engineer",
+        "type": "full-time",
+        "posted": "2024-03-02",
+        "location": "Palo Alto, CA",
+        "skills": ["Computer Vision", "OpenCV", "PyTorch", "Sensor Data", "Machine Learning", "Python", "C++"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.018,
+          "to": 0.045
+        },
+        "perks": ["autonomous vehicle access", "research time", "conference travel", "health benefits"],
+        "apply": "https://autodrive.tech/jobs/perception-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "SmartCity Solutions",
+    "url": "https://smartcity.solutions",
+    "remoteFriendly": true,
+    "market": "Smart Cities & Infrastructure",
+    "size": "300-1000",
+    "jobs": [
+      {
+        "position": "IoT Engineer",
+        "title": "Smart Infrastructure Engineer",
+        "description": "Design and implement IoT solutions for smart cities. Experience with sensors, data collection, and urban planning.",
+        "url": "https://smartcity.solutions/jobs/smart-infrastructure-engineer",
+        "type": "full-time",
+        "posted": "2024-03-03",
+        "location": "Remote",
+        "skills": ["IoT", "Sensors", "Data Collection", "Urban Planning", "Python", "Cloud Platforms", "Data Analytics"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "smart city projects", "learning budget", "flexible hours"],
+        "apply": "https://smartcity.solutions/jobs/smart-infrastructure-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "Digital Marketing AI",
+    "url": "https://digitalmarketing.ai",
+    "remoteFriendly": true,
+    "market": "Digital Marketing & AI",
+    "size": "100-400",
+    "jobs": [
+      {
+        "position": "AI Engineer",
+        "title": "Marketing AI Engineer",
+        "description": "Develop AI models for marketing optimization, customer segmentation, and campaign automation. Experience with marketing analytics and ML.",
+        "url": "https://digitalmarketing.ai/jobs/marketing-ai-engineer",
+        "type": "full-time",
+        "posted": "2024-03-04",
+        "location": "Remote",
+        "skills": ["Python", "Machine Learning", "Marketing Analytics", "Customer Segmentation", "Campaign Automation", "AI Models"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.018,
+          "to": 0.04
+        },
+        "perks": ["remote work", "marketing tools", "learning budget", "performance bonuses"],
+        "apply": "https://digitalmarketing.ai/jobs/marketing-ai-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "LegalTech Innovations",
+    "url": "https://legaltech.innovations",
+    "remoteFriendly": true,
+    "market": "Legal Technology",
+    "size": "75-300",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Legal Document AI Developer",
+        "description": "Build AI systems for legal document analysis and contract review. Experience with NLP, legal tech, and document processing.",
+        "url": "https://legaltech.innovations/jobs/legal-document-ai-dev",
+        "type": "full-time",
+        "posted": "2024-03-05",
+        "location": "Remote",
+        "skills": ["Python", "NLP", "Legal Tech", "Document Processing", "Machine Learning", "Legal Documents"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 170000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["remote work", "legal tech tools", "learning budget", "flexible hours"],
+        "apply": "https://legaltech.innovations/jobs/legal-document-ai-dev/apply"
+      },
+      {
+        "position": "Full Stack Developer",
+        "title": "Legal Platform Developer",
+        "description": "Build web applications for legal case management and client portals. Experience with React, Node.js, and legal workflows.",
+        "url": "https://legaltech.innovations/jobs/legal-platform-dev",
+        "type": "full-time",
+        "posted": "2024-03-06",
+        "location": "Remote",
+        "skills": ["React", "Node.js", "Legal Workflows", "Case Management", "JavaScript", "Legal Tech", "Web Development"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 140000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "legal tech tools", "learning budget", "flexible hours"],
+        "apply": "https://legaltech.innovations/jobs/legal-platform-dev/apply"
+      }
+    ]
+  },
+  {
+    "company": "RetailTech Solutions",
+    "url": "https://retailtech.solutions",
+    "remoteFriendly": true,
+    "market": "Retail Technology & E-commerce",
+    "size": "400-1500",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "E-commerce Platform Developer",
+        "description": "Build scalable e-commerce platforms using modern web technologies. Experience with payment processing and inventory management.",
+        "url": "https://retailtech.solutions/jobs/ecommerce-platform-dev",
+        "type": "full-time",
+        "posted": "2024-03-07",
+        "location": "Remote",
+        "skills": ["React", "Node.js", "E-commerce", "Payment Processing", "Inventory Management", "JavaScript", "Web Development"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "e-commerce tools", "learning budget", "performance bonuses"],
+        "apply": "https://retailtech.solutions/jobs/ecommerce-platform-dev/apply"
+      },
+      {
+        "position": "Data Scientist",
+        "title": "Retail Analytics Scientist",
+        "description": "Analyze customer behavior and retail data to optimize pricing and inventory. Experience with retail analytics and predictive modeling.",
+        "url": "https://retailtech.solutions/jobs/retail-analytics-scientist",
+        "type": "full-time",
+        "posted": "2024-03-08",
+        "location": "Remote",
+        "skills": ["Python", "Retail Analytics", "Customer Behavior", "Predictive Modeling", "Machine Learning", "Data Analysis"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.018,
+          "to": 0.04
+        },
+        "perks": ["remote work", "retail analytics tools", "learning budget", "performance bonuses"],
+        "apply": "https://retailtech.solutions/jobs/retail-analytics-scientist/apply"
+      }
+    ]
+  },
+  {
+    "company": "MediaTech Studios",
+    "url": "https://mediatech.studios",
+    "remoteFriendly": true,
+    "market": "Media & Entertainment Technology",
+    "size": "200-800",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Video Streaming Engineer",
+        "description": "Build video streaming platforms and content delivery networks. Experience with video codecs, streaming protocols, and CDN optimization.",
+        "url": "https://mediatech.studios/jobs/video-streaming-engineer",
+        "type": "full-time",
+        "posted": "2024-03-09",
+        "location": "Remote",
+        "skills": ["Video Codecs", "Streaming Protocols", "CDN", "Python", "C++", "Video Processing", "Network Optimization"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 170000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["remote work", "media tools", "learning budget", "content access"],
+        "apply": "https://mediatech.studios/jobs/video-streaming-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "AgriTech Innovations",
+    "url": "https://agritech.innovations",
+    "remoteFriendly": true,
+    "market": "Agricultural Technology",
+    "size": "100-400",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Precision Agriculture Developer",
+        "description": "Build software for precision agriculture and crop monitoring. Experience with IoT sensors, satellite data, and agricultural analytics.",
+        "url": "https://agritech.innovations/jobs/precision-agriculture-dev",
+        "type": "full-time",
+        "posted": "2024-03-10",
+        "location": "Remote",
+        "skills": ["Python", "IoT Sensors", "Satellite Data", "Agricultural Analytics", "Precision Agriculture", "Data Analysis"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 140000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "agricultural tools", "learning budget", "field visits"],
+        "apply": "https://agritech.innovations/jobs/precision-agriculture-dev/apply"
+      }
+    ]
+  },
+  {
+    "company": "LogisticsTech Solutions",
+    "url": "https://logisticstech.solutions",
+    "remoteFriendly": true,
+    "market": "Logistics & Supply Chain Technology",
+    "size": "300-1200",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Supply Chain Optimization Engineer",
+        "description": "Build algorithms for supply chain optimization and logistics planning. Experience with operations research and optimization algorithms.",
+        "url": "https://logisticstech.solutions/jobs/supply-chain-optimization-engineer",
+        "type": "full-time",
+        "posted": "2024-03-11",
+        "location": "Remote",
+        "skills": ["Python", "Operations Research", "Optimization Algorithms", "Supply Chain", "Logistics", "Mathematical Modeling"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.018,
+          "to": 0.04
+        },
+        "perks": ["remote work", "logistics tools", "learning budget", "performance bonuses"],
+        "apply": "https://logisticstech.solutions/jobs/supply-chain-optimization-engineer/apply"
+      },
+      {
+        "position": "Data Engineer",
+        "title": "Logistics Data Engineer",
+        "description": "Build data pipelines for logistics and supply chain data. Experience with ETL processes, data warehousing, and real-time analytics.",
+        "url": "https://logisticstech.solutions/jobs/logistics-data-engineer",
+        "type": "full-time",
+        "posted": "2024-03-12",
+        "location": "Remote",
+        "skills": ["Python", "ETL", "Data Warehousing", "Real-time Analytics", "SQL", "Apache Kafka", "Docker"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "logistics tools", "learning budget", "performance bonuses"],
+        "apply": "https://logisticstech.solutions/jobs/logistics-data-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "EnergyTech Systems",
+    "url": "https://energytech.systems",
+    "remoteFriendly": true,
+    "market": "Energy Technology & Grid Management",
+    "size": "250-800",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Smart Grid Developer",
+        "description": "Build software for smart grid management and energy distribution optimization. Experience with IoT, real-time data, and energy systems.",
+        "url": "https://energytech.systems/jobs/smart-grid-developer",
+        "type": "full-time",
+        "posted": "2024-03-13",
+        "location": "Remote",
+        "skills": ["Python", "IoT", "Real-time Data", "Energy Systems", "Smart Grid", "Machine Learning", "Cloud Platforms"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.018,
+          "to": 0.04
+        },
+        "perks": ["remote work", "energy tools", "learning budget", "grid access"],
+        "apply": "https://energytech.systems/jobs/smart-grid-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "ConstructionTech",
+    "url": "https://constructiontech.io",
+    "remoteFriendly": true,
+    "market": "Construction Technology & BIM",
+    "size": "150-600",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "BIM Software Developer",
+        "description": "Build Building Information Modeling (BIM) software for construction projects. Experience with 3D modeling, CAD integration, and construction workflows.",
+        "url": "https://constructiontech.io/jobs/bim-software-developer",
+        "type": "full-time",
+        "posted": "2024-03-14",
+        "location": "Remote",
+        "skills": ["C++", "3D Modeling", "CAD Integration", "BIM", "Construction Workflows", "Computer Graphics", "Python"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "BIM tools", "learning budget", "construction site visits"],
+        "apply": "https://constructiontech.io/jobs/bim-software-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "MarineTech Solutions",
+    "url": "https://marinetech.solutions",
+    "remoteFriendly": false,
+    "market": "Marine Technology & Oceanography",
+    "size": "75-300",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Oceanographic Data Engineer",
+        "description": "Build software for oceanographic data collection and analysis. Experience with marine sensors, data processing, and ocean modeling.",
+        "url": "https://marinetech.solutions/jobs/oceanographic-data-engineer",
+        "type": "full-time",
+        "posted": "2024-03-15",
+        "location": "San Diego, CA",
+        "skills": ["Python", "Marine Sensors", "Data Processing", "Ocean Modeling", "Oceanography", "Data Analysis", "Marine Technology"],
+        "salaryRange": {
+          "from": 100000,
+          "to": 140000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["marine lab access", "research vessels", "ocean research", "conference travel"],
+        "apply": "https://marinetech.solutions/jobs/oceanographic-data-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "AeroTech Dynamics",
+    "url": "https://aerotech.dynamics",
+    "remoteFriendly": false,
+    "market": "Aerospace Technology",
+    "size": "200-800",
+    "jobs": [
+      {
+        "position": "Software Engineer",
+        "title": "Flight Control Software Engineer",
+        "description": "Develop flight control software for aircraft and drones. Experience with real-time systems, control theory, and aerospace software.",
+        "url": "https://aerotech.dynamics/jobs/flight-control-software-engineer",
+        "type": "full-time",
+        "posted": "2024-03-16",
+        "location": "Seattle, WA",
+        "skills": ["C++", "Real-time Systems", "Control Theory", "Aerospace Software", "Flight Control", "Embedded Systems", "Python"],
+        "salaryRange": {
+          "from": 130000,
+          "to": 180000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.02,
+          "to": 0.05
+        },
+        "perks": ["aerospace lab access", "flight testing", "research time", "conference travel"],
+        "apply": "https://aerotech.dynamics/jobs/flight-control-software-engineer/apply"
+      },
+      {
+        "position": "Computer Vision Engineer",
+        "title": "Aerospace Computer Vision Engineer",
+        "description": "Develop computer vision algorithms for aircraft navigation and obstacle detection. Experience with OpenCV, PyTorch, and aerospace applications.",
+        "url": "https://aerotech.dynamics/jobs/aerospace-computer-vision-engineer",
+        "type": "full-time",
+        "posted": "2024-03-17",
+        "location": "Seattle, WA",
+        "skills": ["Computer Vision", "OpenCV", "PyTorch", "Aerospace Applications", "Navigation", "Obstacle Detection", "Python"],
+        "salaryRange": {
+          "from": 125000,
+          "to": 165000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.018,
+          "to": 0.045
+        },
+        "perks": ["aerospace lab access", "flight testing", "research time", "conference travel"],
+        "apply": "https://aerotech.dynamics/jobs/aerospace-computer-vision-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "NeuroTech Labs",
+    "url": "https://neurotech.labs",
+    "remoteFriendly": false,
+    "market": "Neuroscience & Brain-Computer Interfaces",
+    "size": "50-200",
+    "jobs": [
+      {
+        "position": "Research Engineer",
+        "title": "BCI Algorithm Developer",
+        "description": "Develop algorithms for brain-computer interfaces and neural signal processing. Experience with neuroscience, signal processing, and machine learning.",
+        "url": "https://neurotech.labs/jobs/bci-algorithm-developer",
+        "type": "full-time",
+        "posted": "2024-03-18",
+        "location": "Boston, MA",
+        "skills": ["Python", "Neuroscience", "Signal Processing", "Machine Learning", "BCI", "Neural Signals", "Research"],
+        "salaryRange": {
+          "from": 140000,
+          "to": 190000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.025,
+          "to": 0.06
+        },
+        "perks": ["neuroscience lab access", "research publications", "conference travel", "patent opportunities"],
+        "apply": "https://neurotech.labs/jobs/bci-algorithm-developer/apply"
+      }
+    ]
+  },
+  {
+    "company": "QuantumAI Systems",
+    "url": "https://quantumai.systems",
+    "remoteFriendly": true,
+    "market": "Quantum AI & Machine Learning",
+    "size": "100-400",
+    "jobs": [
+      {
+        "position": "Quantum AI Engineer",
+        "title": "Quantum Machine Learning Engineer",
+        "description": "Develop quantum machine learning algorithms using Qiskit and quantum computing principles. Experience with quantum algorithms and ML.",
+        "url": "https://quantumai.systems/jobs/quantum-ml-engineer",
+        "type": "full-time",
+        "posted": "2024-03-19",
+        "location": "Remote",
+        "skills": ["Python", "Qiskit", "Quantum Computing", "Machine Learning", "Quantum Algorithms", "Linear Algebra", "Research"],
+        "salaryRange": {
+          "from": 150000,
+          "to": 200000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.03,
+          "to": 0.08
+        },
+        "perks": ["remote work", "quantum lab access", "research publications", "conference travel"],
+        "apply": "https://quantumai.systems/jobs/quantum-ml-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "BioRobotics Corp",
+    "url": "https://biorobotics.corp",
+    "remoteFriendly": false,
+    "market": "Biomedical Robotics",
+    "size": "150-600",
+    "jobs": [
+      {
+        "position": "Robotics Engineer",
+        "title": "Medical Robotics Engineer",
+        "description": "Develop robotic systems for medical procedures and rehabilitation. Experience with medical robotics, control systems, and safety standards.",
+        "url": "https://biorobotics.corp/jobs/medical-robotics-engineer",
+        "type": "full-time",
+        "posted": "2024-03-20",
+        "location": "Pittsburgh, PA",
+        "skills": ["C++", "Medical Robotics", "Control Systems", "Safety Standards", "Robotics", "Medical Devices", "Python"],
+        "salaryRange": {
+          "from": 120000,
+          "to": 160000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.018,
+          "to": 0.04
+        },
+        "perks": ["medical robotics lab access", "clinical collaboration", "research time", "conference travel"],
+        "apply": "https://biorobotics.corp/jobs/medical-robotics-engineer/apply"
+      }
+    ]
+  },
+  {
+    "company": "ClimateTech Solutions",
+    "url": "https://climatetech.solutions",
+    "remoteFriendly": true,
+    "market": "Climate Technology & Sustainability",
+    "size": "200-800",
+    "jobs": [
+      {
+        "position": "Data Scientist",
+        "title": "Climate Data Scientist",
+        "description": "Analyze climate data and develop models for climate prediction and impact assessment. Experience with climate science and environmental data.",
+        "url": "https://climatetech.solutions/jobs/climate-data-scientist",
+        "type": "full-time",
+        "posted": "2024-03-21",
+        "location": "Remote",
+        "skills": ["Python", "Climate Science", "Environmental Data", "Climate Prediction", "Machine Learning", "Data Analysis", "Climate Models"],
+        "salaryRange": {
+          "from": 110000,
+          "to": 150000,
+          "currency": "USD"
+        },
+        "equity": {
+          "from": 0.015,
+          "to": 0.035
+        },
+        "perks": ["remote work", "climate research", "sustainability focus", "conference travel"],
+        "apply": "https://climatetech.solutions/jobs/climate-data-scientist/apply"
+      }
+    ]
+  }
+]
