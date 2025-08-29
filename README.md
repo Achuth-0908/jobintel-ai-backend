@@ -183,9 +183,3 @@ gunicorn main:app --bind 0.0.0.0:5000 --workers 4
 
 
 ---
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
