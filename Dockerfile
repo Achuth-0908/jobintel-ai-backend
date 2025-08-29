@@ -9,5 +9,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy app
 COPY . .
 
-# Use Gunicorn with 1 worker (low memory)
-CMD ["gunicorn", "-w", "1", "-b", "0.0.0.0:${PORT}", "app:app"]
+# Expose Render's dynamic port
+EXPOSE 5000
+
+CMD gunicorn -w 1 -b 0.0.0.0:$PORT app:app
