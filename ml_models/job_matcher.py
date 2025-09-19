@@ -2,6 +2,7 @@ import json
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+import numpy as np
 
 try:
     from sentence_transformers import SentenceTransformer
@@ -108,7 +109,10 @@ class JobMatcher:
 
     def normalize_scores(self, scores):
         """Min-max normalize a list of scores to [0, 1]"""
-        if not scores:
+        # Ensure scores is a list
+        if isinstance(scores, np.ndarray):
+            scores = scores.tolist()
+        if len(scores) == 0:
             return scores
         min_score = min(scores)
         max_score = max(scores)
