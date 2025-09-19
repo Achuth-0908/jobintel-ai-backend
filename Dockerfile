@@ -16,8 +16,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 RUN pip install --no-cache-dir --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-# Download spaCy small English model
-RUN python -m spacy download en_core_web_sm --quiet
+# Skip spaCy model download in build to avoid external fetch failures
+# App will run without the model and gracefully degrade
 
 # Copy project files
 COPY . .
