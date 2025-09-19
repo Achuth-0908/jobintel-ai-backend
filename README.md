@@ -1,6 +1,6 @@
 # JobIntel Backend
 
-![JobIntel Logo](JobIntel-AI/public/brain.png)  
+![JobIntel Logo](brain.png)  
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![License](https://img.shields.io/badge/license-MIT-blue) ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
 
