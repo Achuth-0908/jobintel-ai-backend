@@ -1,141 +1,293 @@
 import re
-from sklearn.metrics.pairwise import cosine_similarity
-import spacy
-import numpy as np
-import logging
-
-try:
-    from sentence_transformers import SentenceTransformer
-except ImportError:
-    SentenceTransformer = None
+import json
+from collections import defaultdict, Counter
+import string
 
 class SkillExtractor:
-    def __init__(self, semantic_threshold=0.35):
-        logging.basicConfig(level=logging.INFO)
-        self.logger = logging.getLogger("SkillExtractor")
-
-        # Load spaCy
-        try:
-            self.nlp = spacy.load("en_core_web_sm")
-        except OSError:
-            self.logger.warning("spaCy model not found. Run: python -m spacy download en_core_web_sm")
-            self.nlp = None
-
-        # Load semantic model if available
-        self.sentence_model = None
-        self.semantic_threshold = semantic_threshold
-        if SentenceTransformer is not None:
-            try:
-                self.sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
-            except Exception as e:
-                self.logger.warning(f"Could not load sentence transformer: {e}")
-                self.sentence_model = None
-
-        # Skills database
-        self.skills_database = self._load_skills_database()
-        self.all_skills = sorted(set(skill for skills in self.skills_database.values() for skill in skills))
-
-        # Precompute embeddings for semantic similarity
-        if self.sentence_model:
-            try:
-                self.skill_embeddings = self.sentence_model.encode(self.all_skills, show_progress_bar=False)
-            except Exception as e:
-                self.logger.warning(f"Error computing skill embeddings: {e}")
-                self.skill_embeddings = None
-                self.sentence_model = None
-
-    def _load_skills_database(self):
-        """Define categories and skills"""
-        return {
-            'programming': [
-                'python', 'java', 'javascript', 'c++', 'c#', 'php', 'ruby', 'go', 'rust',
-                'swift', 'kotlin', 'scala', 'r', 'matlab', 'sql', 'html', 'css', 'react',
-                'angular', 'vue', 'node.js', 'express', 'django', 'flask', 'spring',
-                'laravel', 'rails', 'asp.net', 'jquery', 'bootstrap', 'typescript', 'nextjs',
-                'react native', 'flutter', 'xamarin', 'ionic', 'cordova', 'electron'
-            ],
-            'data_science': [
-                'machine learning', 'deep learning', 'data analysis', 'statistics',
-                'pandas', 'numpy', 'scikit-learn', 'tensorflow', 'pytorch', 'keras',
-                'matplotlib', 'seaborn', 'plotly', 'tableau', 'power bi', 'excel',
-                'nlp', 'computer vision', 'big data', 'hadoop', 'spark', 'data mining'
-            ],
-            'cloud_devops': [
-                'aws', 'azure', 'google cloud', 'docker', 'kubernetes', 'jenkins',
-                'git', 'github', 'gitlab', 'terraform', 'ansible', 'ci/cd', 'linux',
-                'bash', 'shell scripting', 'monitoring', 'logging', 'prometheus', 'grafana'
-            ],
-            'databases': [
-                'mysql', 'postgresql', 'mongodb', 'redis', 'cassandra', 'oracle',
-                'sqlite', 'dynamodb', 'elasticsearch', 'neo4j', 'firebase'
-            ],
-            'tools': [
-                'jira', 'confluence', 'slack', 'trello', 'asana', 'notion',
-                'postman', 'swagger', 'figma', 'photoshop', 'illustrator'
-            ],
-            'soft_skills': [
+    def __init__(self, skills_db_path=None):
+        # Comprehensive skill database - you can expand this
+        self.skill_keywords = {
+            # Programming Languages
+            'programming': {
+                'python', 'java', 'javascript', 'typescript', 'c++', 'c#', 'go', 'rust',
+                'ruby', 'php', 'swift', 'kotlin', 'scala', 'r', 'matlab', 'perl',
+                'shell', 'bash', 'powershell', 'sql', 'html', 'css', 'dart', 'lua'
+            },
+            
+            # Frameworks and Libraries
+            'frameworks': {
+                'react', 'angular', 'vue', 'django', 'flask', 'fastapi', 'express',
+                'spring', 'laravel', 'rails', 'asp.net', 'nodejs', 'nextjs', 'nuxt',
+                'bootstrap', 'tailwind', 'jquery', 'tensorflow', 'pytorch', 'scikit-learn',
+                'pandas', 'numpy', 'matplotlib', 'seaborn', 'opencv'
+            },
+            
+            # Databases
+            'databases': {
+                'mysql', 'postgresql', 'mongodb', 'redis', 'elasticsearch', 'sqlite',
+                'oracle', 'dynamodb', 'cassandra', 'neo4j', 'influxdb', 'mariadb'
+            },
+            
+            # Cloud and DevOps
+            'cloud': {
+                'aws', 'azure', 'gcp', 'docker', 'kubernetes', 'terraform', 'ansible',
+                'jenkins', 'gitlab', 'github', 'circleci', 'travis', 'heroku', 'vercel'
+            },
+            
+            # Tools and Software
+            'tools': {
+                'git', 'jira', 'confluence', 'slack', 'trello', 'asana', 'figma',
+                'sketch', 'photoshop', 'illustrator', 'excel', 'powerpoint', 'tableau',
+                'power bi', 'looker', 'grafana', 'postman', 'insomnia'
+            },
+            
+            # Methodologies
+            'methodologies': {
+                'agile', 'scrum', 'kanban', 'devops', 'ci/cd', 'tdd', 'bdd',
+                'microservices', 'rest', 'graphql', 'soap', 'api', 'mvc'
+            },
+            
+            # Soft Skills
+            'soft_skills': {
                 'leadership', 'communication', 'teamwork', 'problem solving',
-                'project management', 'agile', 'scrum', 'creativity', 'adaptability'
-            ]
+                'critical thinking', 'time management', 'project management',
+                'analytical', 'creative', 'adaptability', 'collaboration'
+            }
         }
-
-    def preprocess_text(self, text):
-        """Normalize text for skill extraction"""
-        text = text.lower()
-        text = re.sub(r'[^a-z0-9\s+.#\-]', ' ', text)
-        text = re.sub(r'\s+', ' ', text).strip()
-        return text
-
-    # ---------------- Regex Extraction ----------------
-    def extract_skills_regex(self, text):
-        text = self.preprocess_text(text)
-        found_skills = [skill for skill in self.all_skills if re.search(r'\b' + re.escape(skill) + r'\b', text)]
-        return list(set(found_skills))
-
-    # ---------------- spaCy NLP Extraction ----------------
-    def extract_skills_spacy(self, text):
-        if not self.nlp:
-            return []
+        
+        # Flatten all skills for quick lookup
+        self.all_skills = set()
+        for category_skills in self.skill_keywords.values():
+            self.all_skills.update(category_skills)
+        
+        # Create skill variations (plurals, common variations)
+        self._expand_skill_variations()
+        
+        # Load additional skills from file if provided
+        if skills_db_path:
+            self._load_skills_db(skills_db_path)
+        
+        # Pre-compile regex patterns for performance
+        self._compile_patterns()
+        
+    def _expand_skill_variations(self):
+        """Expand skill database with common variations"""
+        expanded_skills = set(self.all_skills)
+        
+        for skill in list(self.all_skills):
+            # Add plural forms
+            if not skill.endswith('s') and skill not in ['css', 'express']:
+                expanded_skills.add(skill + 's')
+            
+            # Add common variations
+            variations = {
+                'javascript': ['js', 'javascript'],
+                'typescript': ['ts', 'typescript'],
+                'python': ['py', 'python'],
+                'react': ['reactjs', 'react.js'],
+                'node': ['nodejs', 'node.js'],
+                'c++': ['cpp', 'c plus plus'],
+                'c#': ['csharp', 'c sharp'],
+                'postgresql': ['postgres', 'psql'],
+                'mongodb': ['mongo'],
+                'machine learning': ['ml', 'machine learning'],
+                'artificial intelligence': ['ai', 'artificial intelligence']
+            }
+            
+            if skill in variations:
+                expanded_skills.update(variations[skill])
+        
+        self.all_skills = expanded_skills
+    
+    def _load_skills_db(self, skills_db_path):
+        """Load additional skills from JSON file"""
         try:
-            doc = self.nlp(text)
-            found_skills = []
-            phrases = [chunk.text.lower() for chunk in doc.noun_chunks] + [ent.text.lower() for ent in doc.ents]
-            for skill in self.all_skills:
-                if any(skill in phrase for phrase in phrases):
-                    found_skills.append(skill)
-            return list(set(found_skills))
+            with open(skills_db_path, 'r') as f:
+                additional_skills = json.load(f)
+                if isinstance(additional_skills, list):
+                    self.all_skills.update([s.lower() for s in additional_skills])
+                elif isinstance(additional_skills, dict):
+                    for category, skills in additional_skills.items():
+                        if category not in self.skill_keywords:
+                            self.skill_keywords[category] = set()
+                        self.skill_keywords[category].update([s.lower() for s in skills])
+                        self.all_skills.update([s.lower() for s in skills])
         except Exception as e:
-            self.logger.warning(f"spaCy extraction error: {e}")
+            print(f"[WARNING] Could not load skills database: {e}")
+    
+    def _compile_patterns(self):
+        """Pre-compile regex patterns for better performance"""
+        # Pattern for extracting skill-like phrases
+        self.skill_pattern = re.compile(
+            r'\b(?:' + '|'.join(re.escape(skill) for skill in self.all_skills) + r')\b',
+            re.IGNORECASE
+        )
+        
+        # Pattern for common skill contexts
+        self.context_patterns = {
+            'experience': re.compile(r'(?:experience (?:in|with)|skilled (?:in|with)|proficient (?:in|with)|expert (?:in|with))[\s:]+([\w\s,.-]+)', re.IGNORECASE),
+            'technologies': re.compile(r'(?:technologies|tools|frameworks|languages)[\s:]+([\w\s,.-]+)', re.IGNORECASE),
+            'skills': re.compile(r'(?:skills|competencies|abilities)[\s:]+([\w\s,.-]+)', re.IGNORECASE)
+        }
+    
+    def clean_text(self, text):
+        """Clean and normalize text for better extraction"""
+        if not text:
+            return ""
+        
+        # Remove extra whitespace and normalize
+        text = ' '.join(text.split())
+        
+        # Remove bullet points and special characters but keep important ones
+        text = re.sub(r'[•▪▫◦‣⁃]', ' ', text)
+        text = re.sub(r'[^\w\s.#+-]', ' ', text)  # Keep dots, hashes, plus, minus
+        
+        return text.lower()
+    
+    def extract_skills_direct(self, text):
+        """Direct skill matching using pre-compiled patterns"""
+        if not text:
             return []
-
-    # ---------------- Semantic Extraction ----------------
-    def extract_skills_semantic(self, text):
-        if not self.sentence_model or self.skill_embeddings is None:
-            return []
-        try:
-            text_embedding = self.sentence_model.encode([self.preprocess_text(text)])
-            similarities = cosine_similarity(text_embedding, self.skill_embeddings)[0]
-            return [self.all_skills[i] for i, sim in enumerate(similarities) if sim >= self.semantic_threshold]
-        except Exception as e:
-            self.logger.warning(f"Semantic extraction error: {e}")
-            return []
-
-    # ---------------- Main Extraction ----------------
-    def extract_skills(self, text):
-        regex_skills = self.extract_skills_regex(text)
-        spacy_skills = self.extract_skills_spacy(text)
-        semantic_skills = self.extract_skills_semantic(text)
-        all_skills = list(set(regex_skills + spacy_skills + semantic_skills))
-
-        categorized_skills = {cat: [s for s in all_skills if s in skills] for cat, skills in self.skills_database.items()}
+        
+        cleaned_text = self.clean_text(text)
+        matches = self.skill_pattern.findall(cleaned_text)
+        return list(set(matches))
+    
+    def extract_skills_contextual(self, text):
+        """Extract skills from contextual patterns"""
+        skills = []
+        
+        for pattern_name, pattern in self.context_patterns.items():
+            matches = pattern.findall(text)
+            for match in matches:
+                # Split by common separators and extract individual skills
+                potential_skills = re.split(r'[,;|\n\t]', match)
+                for skill in potential_skills:
+                    skill = skill.strip()
+                    if skill and len(skill) > 1:
+                        # Check if it's a known skill
+                        skill_lower = skill.lower()
+                        if skill_lower in self.all_skills:
+                            skills.append(skill_lower)
+        
+        return list(set(skills))
+    
+    def extract_from_sections(self, text):
+        """Extract skills from specific resume sections"""
+        skills = []
+        
+        # Define section patterns
+        section_patterns = {
+            'technical_skills': re.compile(r'(?:technical skills|technical competencies|programming languages|technologies):(.*?)(?=\n[A-Z]|\n\n|$)', re.IGNORECASE | re.DOTALL),
+            'skills': re.compile(r'(?:^|\n)skills:(.*?)(?=\n[A-Z]|\n\n|$)', re.IGNORECASE | re.DOTALL),
+            'tools': re.compile(r'(?:tools & technologies|tools and technologies|software):(.*?)(?=\n[A-Z]|\n\n|$)', re.IGNORECASE | re.DOTALL)
+        }
+        
+        for section_name, pattern in section_patterns.items():
+            matches = pattern.findall(text)
+            for match in matches:
+                section_skills = self.extract_skills_direct(match)
+                skills.extend(section_skills)
+        
+        return list(set(skills))
+    
+    def extract_skills(self, text, include_soft_skills=True, confidence_threshold=0.0):
+        """
+        Main method to extract skills from text
+        
+        Args:
+            text (str): Input text (resume, job description, etc.)
+            include_soft_skills (bool): Whether to include soft skills
+            confidence_threshold (float): Minimum confidence score (0-1)
+        
+        Returns:
+            dict: Extracted skills with metadata
+        """
+        if not text:
+            return {'skills': [], 'skill_categories': {}, 'confidence_scores': {}}
+        
+        all_extracted_skills = []
+        
+        # Method 1: Direct pattern matching
+        direct_skills = self.extract_skills_direct(text)
+        all_extracted_skills.extend(direct_skills)
+        
+        # Method 2: Contextual extraction
+        contextual_skills = self.extract_skills_contextual(text)
+        all_extracted_skills.extend(contextual_skills)
+        
+        # Method 3: Section-based extraction
+        section_skills = self.extract_from_sections(text)
+        all_extracted_skills.extend(section_skills)
+        
+        # Count occurrences for confidence scoring
+        skill_counts = Counter(all_extracted_skills)
+        
+        # Filter by confidence threshold and soft skills preference
+        final_skills = []
+        skill_categories = defaultdict(list)
+        confidence_scores = {}
+        
+        for skill, count in skill_counts.items():
+            # Calculate simple confidence based on occurrence and length
+            confidence = min(1.0, (count * 0.3) + (len(skill) * 0.1) / 10)
+            
+            if confidence >= confidence_threshold:
+                # Check if it's a soft skill
+                is_soft_skill = skill in self.skill_keywords.get('soft_skills', set())
+                
+                if include_soft_skills or not is_soft_skill:
+                    final_skills.append(skill)
+                    confidence_scores[skill] = confidence
+                    
+                    # Categorize the skill
+                    for category, category_skills in self.skill_keywords.items():
+                        if skill in category_skills:
+                            skill_categories[category].append(skill)
+                            break
+                    else:
+                        skill_categories['other'].append(skill)
+        
+        # Remove duplicates and sort
+        final_skills = sorted(list(set(final_skills)))
+        
         return {
-            'all_skills': all_skills,
-            'categorized_skills': categorized_skills,
-            'skill_count': len(all_skills)
+            'skills': final_skills,
+            'skill_categories': dict(skill_categories),
+            'confidence_scores': confidence_scores,
+            'total_found': len(final_skills)
         }
-
-    # ---------------- Frequency ----------------
-    def get_skill_frequency(self, text):
-        text = self.preprocess_text(text)
-        freq = {skill: len(re.findall(r'\b' + re.escape(skill) + r'\b', text)) for skill in self.all_skills}
-        return {k: v for k, v in freq.items() if v > 0}
+    
+    def get_skill_suggestions(self, text, max_suggestions=10):
+        """Get skill suggestions based on partial matches"""
+        if not text:
+            return []
+        
+        text_lower = text.lower()
+        suggestions = []
+        
+        for skill in self.all_skills:
+            if text_lower in skill or skill in text_lower:
+                suggestions.append(skill)
+        
+        return sorted(suggestions)[:max_suggestions]
+    
+    def validate_skills(self, skills):
+        """Validate if provided skills are recognized"""
+        if not skills:
+            return []
+        
+        valid_skills = []
+        for skill in skills:
+            if isinstance(skill, str) and skill.lower().strip() in self.all_skills:
+                valid_skills.append(skill.lower().strip())
+        
+        return valid_skills
+    
+    def get_stats(self):
+        """Get extractor statistics"""
+        return {
+            'total_skills_in_db': len(self.all_skills),
+            'categories': list(self.skill_keywords.keys()),
+            'skills_per_category': {cat: len(skills) for cat, skills in self.skill_keywords.items()}
+        }
