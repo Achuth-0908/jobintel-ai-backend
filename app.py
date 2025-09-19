@@ -80,7 +80,7 @@ def upload_file():
 
             skill_analysis = skill_extractor.extract_skills(resume_text)
             job_recommendations = job_matcher.get_job_recommendations(
-                skill_analysis['all_skills'],
+                skill_analysis['skills'],
                 resume_text
             )
 
@@ -118,7 +118,7 @@ def analyze_text():
 
         skill_analysis = skill_extractor.extract_skills(resume_text)
         job_recommendations = job_matcher.get_job_recommendations(
-            skill_analysis['all_skills'],
+            skill_analysis['skills'],
             resume_text
         )
 
