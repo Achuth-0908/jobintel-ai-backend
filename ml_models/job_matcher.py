@@ -195,7 +195,7 @@ class JobMatcher:
         return results  # Return all jobs, sorted
 
     def get_job_recommendations(self, resume_skills, resume_text):
-        """Get job recommendations with detailed analysis (all jobs, sorted)"""
+        """Get job recommendations with detailed analysis (all jobs, sorted, filtered by score >= 30%)"""
         matching_jobs = self.find_matching_jobs(resume_skills, resume_text)
 
         for job in matching_jobs:
@@ -216,4 +216,7 @@ class JobMatcher:
                 reasons.append("Basic compatibility with your profile")
             job['recommendation_reasons'] = reasons
 
-        return matching_jobs
+        # Filter jobs with match_score >= 30%
+        filtered_jobs = [job for job in matching_jobs if job['match_score'] >= 30.0]
+
+        return filtered_jobs
