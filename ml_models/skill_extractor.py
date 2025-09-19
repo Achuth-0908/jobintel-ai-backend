@@ -1,10 +1,10 @@
-import spacy
+import spacy # type: ignore
 import re
 from sklearn.metrics.pairwise import cosine_similarity
-import nltk
+import nltk # type: ignore
 
 try:
-    from sentence_transformers import SentenceTransformer  # heavy; make optional
+    from sentence_transformers import SentenceTransformer  # type: ignore # heavy; make optional
 except Exception:
     SentenceTransformer = None
 
