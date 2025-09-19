@@ -2,7 +2,11 @@ import spacy
 import re
 from sklearn.metrics.pairwise import cosine_similarity
 import nltk
-from sentence_transformers import SentenceTransformer
+
+try:
+    from sentence_transformers import SentenceTransformer  # heavy; make optional
+except Exception:
+    SentenceTransformer = None
 
 try:
     nltk.download('stopwords', quiet=True)
@@ -18,11 +22,13 @@ class SkillExtractor:
             print("Please install spaCy English model: python -m spacy download en_core_web_sm")
             self.nlp = None
 
-        try:
-            self.sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
-        except:
-            print("Could not load sentence transformer model")
-            self.sentence_model = None
+        self.sentence_model = None
+        if SentenceTransformer is not None:
+            try:
+                self.sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
+            except Exception:
+                print("Could not load sentence transformer model")
+                self.sentence_model = None
 
         self.skills_database = {
             'programming': [

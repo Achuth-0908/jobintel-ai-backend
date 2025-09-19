@@ -1,9 +1,8 @@
-Flask
-flask-cors
-gunicorn
-PyPDF2
-pandas
-scikit-learn
-nltk
-spacy
-sentence-transformers
+Flask==3.0.3
+flask-cors==4.0.1
+gunicorn==22.0.0
+PyPDF2==3.0.1
+pandas==2.2.2
+scikit-learn==1.4.2
+nltk==3.8.1
+spacy==3.7.4

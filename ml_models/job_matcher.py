@@ -2,7 +2,11 @@ import json
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from sentence_transformers import SentenceTransformer
+
+try:
+    from sentence_transformers import SentenceTransformer
+except Exception:
+    SentenceTransformer = None
 
 class JobMatcher:
     def __init__(self, job_data_path='data/jobs_descriptions.json'):
@@ -11,11 +15,13 @@ class JobMatcher:
         self.job_data = None
         self.tfidf_vectorizer = TfidfVectorizer(max_features=1000, stop_words='english')
         
-        try:
-            self.sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
-        except:
-            print("Could not load sentence transformer model")
-            self.sentence_model = None
+        self.sentence_model = None
+        if SentenceTransformer is not None:
+            try:
+                self.sentence_model = SentenceTransformer('all-MiniLM-L6-v2')
+            except Exception:
+                print("Could not load sentence transformer model")
+                self.sentence_model = None
         
         self.job_vectors = None
         self.load_job_data()
