@@ -2155,5 +2155,26 @@
         "apply": "https://climatetech.solutions/jobs/climate-data-scientist/apply"
       }
     ]
+  },
+  {
+    "position": "Web Developer",
+    "title": "Full Stack Web Developer",
+    "description": "Build full stack web applications using React.js, Node.js, and MongoDB. Experience with REST APIs and cloud deployment is a plus.",
+    "url": "https://streamlineapps.io/jobs/fullstack-web-developer",
+    "type": "full-time",
+    "posted": "2024-01-21",
+    "location": "Remote",
+    "skills": ["React.js", "Node.js", "MongoDB", "JavaScript", "HTML5", "CSS3", "REST APIs", "Git"],
+    "salaryRange": {
+      "from": 60000,
+      "to": 90000,
+      "currency": "USD"
+    },
+    "equity": {
+      "from": 0.002,
+      "to": 0.005
+    },
+    "perks": ["Flexible hours", "Remote work", "Health insurance", "Professional development stipend"],
+    "apply": "https://streamlineapps.io/jobs/fullstack-web-developer/apply"
   }
 ]
