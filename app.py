@@ -82,7 +82,7 @@ def upload_file():
             job_recommendations = job_matcher.get_job_recommendations(
                 skill_analysis['all_skills'],
                 resume_text
-            )
+            )  # No top_n argument, returns all jobs
 
             os.remove(file_path)
 
@@ -120,7 +120,7 @@ def analyze_text():
         job_recommendations = job_matcher.get_job_recommendations(
             skill_analysis['all_skills'],
             resume_text
-        )
+        )  # No top_n argument, returns all jobs
 
         result = {
             'success': True,

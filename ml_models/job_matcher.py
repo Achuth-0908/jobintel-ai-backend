@@ -95,25 +95,31 @@ class JobMatcher:
             print(f"Error setting up vectorizer: {e}")
     
     def calculate_skill_match_score(self, resume_skills, job_skills):
-        """Calculate skill match score between resume and job"""
+        """Calculate skill match score between resume and job (Jaccard similarity)"""
         if not resume_skills or not job_skills:
             return 0.0
-        
-        resume_skills_lower = [skill.lower() for skill in resume_skills]
-        job_skills_lower = [skill.lower() for skill in job_skills]
-        
-        matched_skills = set(resume_skills_lower) & set(job_skills_lower)
-        
-        if not job_skills_lower:
+        resume_skills_lower = set([skill.lower() for skill in resume_skills])
+        job_skills_lower = set([skill.lower() for skill in job_skills])
+        intersection = resume_skills_lower & job_skills_lower
+        union = resume_skills_lower | job_skills_lower
+        if not union:
             return 0.0
-        
-        return len(matched_skills) / len(job_skills_lower)
-    
-    def find_matching_jobs(self, resume_skills, resume_text, top_n=10):
-        """Find matching jobs based on skills and resume text"""
+        return len(intersection) / len(union)
+
+    def normalize_scores(self, scores):
+        """Min-max normalize a list of scores to [0, 1]"""
+        if not scores:
+            return scores
+        min_score = min(scores)
+        max_score = max(scores)
+        if max_score == min_score:
+            return [0.0 for _ in scores]
+        return [(s - min_score) / (max_score - min_score) for s in scores]
+
+    def find_matching_jobs(self, resume_skills, resume_text):
+        """Find matching jobs based on skills and resume text (return all jobs)"""
         if self.jobs_df is None or len(self.jobs_df) == 0:
             return []
-        
         if not resume_skills:
             return []
 
@@ -142,7 +148,6 @@ class JobMatcher:
                     skills_text = ' '.join(row['skills']) if row['skills'] else ''
                     combined_text = f"{row['description']} {skills_text}"
                     job_texts.append(combined_text)
-                
                 job_embeddings = self.sentence_model.encode(job_texts)
                 semantic_similarities = cosine_similarity(resume_embedding, job_embeddings)[0]
             except Exception as e:
@@ -151,12 +156,18 @@ class JobMatcher:
         else:
             semantic_similarities = [0.0] * len(self.jobs_df)
 
+        # Normalize scores for fair combination
+        skill_scores_norm = self.normalize_scores(skill_scores)
+        text_similarities_norm = self.normalize_scores(text_similarities)
+        semantic_similarities_norm = self.normalize_scores(semantic_similarities)
+
         combined_scores = []
         for i in range(len(self.jobs_df)):
+            # Adjust weights for better accuracy
             combined_score = (
-                0.5 * skill_scores[i] +
-                0.3 * text_similarities[i] +
-                0.2 * semantic_similarities[i]
+                0.4 * skill_scores_norm[i] +
+                0.3 * text_similarities_norm[i] +
+                0.3 * semantic_similarities_norm[i]
             )
             combined_scores.append(combined_score)
 
@@ -164,43 +175,41 @@ class JobMatcher:
         for idx, score in enumerate(combined_scores):
             job = self.jobs_df.iloc[idx].to_dict()
             job['match_score'] = float(round(score * 100, 2))
-            job['skill_match_score'] = float(round(skill_scores[idx] * 100, 2))
-            job['text_similarity_score'] = float(round(text_similarities[idx] * 100, 2))
-            job['semantic_similarity_score'] = float(round(semantic_similarities[idx] * 100, 2))
-            
-            resume_skills_lower = [skill.lower() for skill in resume_skills]
-            job_skills_lower = [skill.lower() for skill in job['skills']]
-            matched_skills = list(set(resume_skills_lower) & set(job_skills_lower))
+            job['skill_match_score'] = float(round(skill_scores_norm[idx] * 100, 2))
+            job['text_similarity_score'] = float(round(text_similarities_norm[idx] * 100, 2))
+            job['semantic_similarity_score'] = float(round(semantic_similarities_norm[idx] * 100, 2))
+
+            resume_skills_lower = set([skill.lower() for skill in resume_skills])
+            job_skills_lower = set([skill.lower() for skill in job['skills']])
+            matched_skills = list(resume_skills_lower & job_skills_lower)
             job['matched_skills'] = matched_skills
             job['matched_skills_count'] = int(len(matched_skills))
 
             results.append(job)
 
         results.sort(key=lambda x: x['match_score'], reverse=True)
-        return results[:top_n]
-    
-    def get_job_recommendations(self, resume_skills, resume_text, top_n=10):
-        """Get job recommendations with detailed analysis"""
-        matching_jobs = self.find_matching_jobs(resume_skills, resume_text, top_n)
+        return results  # Return all jobs, sorted
+
+    def get_job_recommendations(self, resume_skills, resume_text):
+        """Get job recommendations with detailed analysis (all jobs, sorted)"""
+        matching_jobs = self.find_matching_jobs(resume_skills, resume_text)
 
         for job in matching_jobs:
             reasons = []
-            
-            if job['skill_match_score'] > 30:
+            if job['skill_match_score'] > 50:
+                reasons.append(f"Excellent skill match ({job['skill_match_score']:.1f}%)")
+            elif job['skill_match_score'] > 30:
                 reasons.append(f"Strong skill match ({job['skill_match_score']:.1f}%)")
-            
             if job['matched_skills_count'] > 0:
                 reasons.append(f"Matches {job['matched_skills_count']} key skills")
-            
-            if job['semantic_similarity_score'] > 20:
+            if job['semantic_similarity_score'] > 40:
+                reasons.append("High semantic similarity with job description")
+            elif job['semantic_similarity_score'] > 20:
                 reasons.append("Good semantic similarity with job description")
-            
-            if job['remote_friendly']:
+            if job.get('remote_friendly', False):
                 reasons.append("Remote-friendly position")
-            
             if not reasons:
                 reasons.append("Basic compatibility with your profile")
-            
             job['recommendation_reasons'] = reasons
-        
+
         return matching_jobs
