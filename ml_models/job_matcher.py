@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from datetime import datetime
 
 try:
-    from sentence_transformers import SentenceTransformer
+    from sentence_transformers import SentenceTransformer  # pyright: ignore[reportMissingImports]
 except ImportError:
     SentenceTransformer = None
 
@@ -131,7 +131,7 @@ class JobMatcher:
         return combined_scores, skill_scores, tfidf_scores, semantic_scores
 
     # ------------------- Job Recommendation -------------------
-    def get_job_recommendations(self, resume_skills, resume_text, top_n=10):
+    def get_job_recommendations(self, resume_skills, resume_text, top_n=25):
         combined_scores, skill_scores, tfidf_scores, semantic_scores = self.compute_scores(resume_skills, resume_text)
 
         results = []
