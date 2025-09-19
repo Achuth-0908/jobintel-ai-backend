@@ -1,174 +1,358 @@
-from flask import Flask, request # type: ignore
-from flask_cors import CORS # type: ignore
-from werkzeug.utils import secure_filename # type: ignore
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+from werkzeug.utils import secure_filename
 import os
-import PyPDF2 # type: ignore
+import PyPDF2
 import json
-from ml_models.skill_extractor import SkillExtractor
-from ml_models.job_matcher import JobMatcher
 import traceback
+from datetime import datetime
+
+# Import your ML models
+try:
+    from ml_models.skill_extractor import SkillExtractor
+    from ml_models.job_matcher import JobMatcher
+except ImportError as e:
+    print(f"Warning: Could not import ML models: {e}")
+    SkillExtractor = None
+    JobMatcher = None
 
 app = Flask(__name__)
-CORS(app)  # <-- enables CORS
+CORS(app)
 
+# Configuration
 app.config['UPLOAD_FOLDER'] = 'uploads'
-app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max file size
 
+# Create upload directory
 os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 
-skill_extractor = SkillExtractor()
-job_matcher = JobMatcher()
+# Initialize models with error handling
+skill_extractor = None
+job_matcher = None
+
+try:
+    if SkillExtractor:
+        skill_extractor = SkillExtractor()
+        print("✓ SkillExtractor initialized successfully")
+    if JobMatcher:
+        job_matcher = JobMatcher()
+        print("✓ JobMatcher initialized successfully")
+except Exception as e:
+    print(f"⚠️  Error initializing models: {e}")
+    traceback.print_exc()
 
 ALLOWED_EXTENSIONS = {'pdf', 'txt'}
 
 def allowed_file(filename):
+    """Check if file extension is allowed"""
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def extract_text_from_pdf(pdf_path):
+    """Extract text from PDF file with better error handling"""
     try:
+        text = ""
         with open(pdf_path, 'rb') as file:
             pdf_reader = PyPDF2.PdfReader(file)
-            text = ""
-            for page in pdf_reader.pages:
-                page_text = page.extract_text()
-                if page_text:
-                    text += page_text + "\n"
-        return text
+            
+            # Check if PDF is encrypted
+            if pdf_reader.is_encrypted:
+                return "Error: PDF is encrypted and cannot be processed"
+            
+            for page_num, page in enumerate(pdf_reader.pages):
+                try:
+                    page_text = page.extract_text()
+                    if page_text:
+                        text += page_text + "\n"
+                except Exception as page_error:
+                    print(f"Error extracting text from page {page_num}: {page_error}")
+                    continue
+        
+        return text.strip()
     except Exception as e:
         print(f"Error extracting text from PDF: {e}")
-        return ""
+        return f"Error reading PDF: {str(e)}"
 
 def extract_text_from_txt(txt_path):
-    try:
-        with open(txt_path, 'r', encoding='utf-8') as file:
-            return file.read()
-    except Exception as e:
-        print(f"Error extracting text from TXT: {e}")
-        return ""
+    """Extract text from TXT file with encoding handling"""
+    encodings = ['utf-8', 'latin-1', 'cp1252', 'iso-8859-1']
+    
+    for encoding in encodings:
+        try:
+            with open(txt_path, 'r', encoding=encoding) as file:
+                return file.read()
+        except UnicodeDecodeError:
+            continue
+        except Exception as e:
+            print(f"Error reading file with {encoding}: {e}")
+            continue
+    
+    return f"Error: Could not read file with any supported encoding"
 
 @app.route('/')
 def index():
-    return {
+    """API information endpoint"""
+    return jsonify({
         'message': 'JobIntel AI API',
         'status': 'running',
+        'version': '1.0.0',
+        'timestamp': datetime.now().isoformat(),
         'endpoints': {
-            'upload': '/upload (POST)',
-            'analyze_text': '/analyze_text (POST)',
-            'health': '/health (GET)'
-        }
-    }
+            'upload': '/upload (POST) - Upload resume file for analysis',
+            'analyze_text': '/analyze_text (POST) - Analyze resume text directly',
+            'health': '/health (GET) - Health check'
+        },
+        'supported_formats': list(ALLOWED_EXTENSIONS),
+        'max_file_size': '16MB'
+    })
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
+    """Handle file upload and analysis"""
     try:
+        # Check if models are available
+        if not skill_extractor or not job_matcher:
+            return jsonify({
+                'error': 'ML models not initialized',
+                'details': 'SkillExtractor or JobMatcher failed to load'
+            }), 500
+
+        # Validate request
         if 'file' not in request.files:
-            return json_response({'error': 'No file uploaded'}, 400)
+            return jsonify({'error': 'No file uploaded'}), 400
 
         file = request.files['file']
         if file.filename == '':
-            return json_response({'error': 'No file selected'}, 400)
+            return jsonify({'error': 'No file selected'}), 400
 
-        if file and allowed_file(file.filename):
-            filename = secure_filename(file.filename)
-            file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-            file.save(file_path)
+        if not file or not allowed_file(file.filename):
+            return jsonify({
+                'error': 'Invalid file type', 
+                'supported_formats': list(ALLOWED_EXTENSIONS)
+            }), 400
 
-            resume_text = extract_text_from_pdf(file_path) if filename.lower().endswith('.pdf') else extract_text_from_txt(file_path)
+        # Save and process file
+        filename = secure_filename(file.filename)
+        file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        file.save(file_path)
 
-            if not resume_text.strip():
-                return json_response({'error': 'Could not extract text from file'}, 400)
+        try:
+            # Extract text based on file type
+            if filename.lower().endswith('.pdf'):
+                resume_text = extract_text_from_pdf(file_path)
+            else:
+                resume_text = extract_text_from_txt(file_path)
 
+            # Clean up file immediately
+            if os.path.exists(file_path):
+                os.remove(file_path)
+
+            # Validate extracted text
+            if not resume_text or not resume_text.strip():
+                return jsonify({'error': 'Could not extract text from file'}), 400
+
+            if resume_text.startswith('Error'):
+                return jsonify({'error': resume_text}), 400
+
+            # Analyze skills
+            print("Extracting skills...")
             skill_analysis = skill_extractor.extract_skills(resume_text)
+            print(f"Skills extracted: {len(skill_analysis.get('skills', []))}")
+
+            # Get job recommendations
+            print("Getting job recommendations...")
             job_recommendations = job_matcher.get_job_recommendations(
-                skill_analysis['skills'],
-                resume_text
+                skill_analysis.get('skills', []),  # Use .get() to avoid KeyError
+                resume_text,
+                top_n=25
             )
+            print(f"Job recommendations: {len(job_recommendations)}")
 
-            os.remove(file_path)
-
+            # Prepare response
             result = {
                 'success': True,
-                'resume_text': resume_text[:500] + '...' if len(resume_text) > 500 else resume_text,
+                'filename': filename,
+                'resume_text': resume_text[:1000] + '...' if len(resume_text) > 1000 else resume_text,
                 'skills': skill_analysis,
-                'job_recommendations': json_safe(job_recommendations)
+                'job_recommendations': job_recommendations,
+                'stats': {
+                    'text_length': len(resume_text),
+                    'skills_found': len(skill_analysis.get('skills', [])),
+                    'recommendations_count': len(job_recommendations)
+                }
             }
 
-            print("Result:", json.dumps(result, indent=2))
-            return json_response(result)
+            return jsonify(result)
 
-        return json_response({'error': 'Invalid file type. Please upload PDF or TXT files.'}, 400)
+        except Exception as processing_error:
+            # Clean up file on error
+            if os.path.exists(file_path):
+                os.remove(file_path)
+            raise processing_error
 
     except Exception as e:
         print(f"Error in upload_file: {e}")
         traceback.print_exc()
-        return json_response({'error': 'An error occurred while processing your file'}, 500)
+        return jsonify({
+            'error': 'An error occurred while processing your file',
+            'details': str(e) if app.debug else None
+        }), 500
 
 @app.route('/analyze_text', methods=['POST'])
 def analyze_text():
+    """Analyze resume text directly without file upload"""
     try:
+        # Check if models are available
+        if not skill_extractor or not job_matcher:
+            return jsonify({
+                'error': 'ML models not initialized',
+                'details': 'SkillExtractor or JobMatcher failed to load'
+            }), 500
+
+        # Validate request
         if not request.is_json:
-            return json_response({'error': 'Content-Type must be application/json'}, 400)
+            return jsonify({'error': 'Content-Type must be application/json'}), 400
+
         data = request.get_json(silent=True)
         if not data:
-            return json_response({'error': 'No JSON data provided'}, 400)
+            return jsonify({'error': 'No JSON data provided'}), 400
 
-        resume_text = data.get('text', '')
-        if not resume_text.strip():
-            return json_response({'error': 'Please provide resume text'}, 400)
+        resume_text = data.get('text', '').strip()
+        if not resume_text:
+            return jsonify({'error': 'Please provide resume text'}), 400
 
+        # Validate text length
+        if len(resume_text) < 50:
+            return jsonify({'error': 'Resume text is too short. Please provide more detailed text.'}), 400
+
+        # Analyze skills
+        print("Extracting skills from text...")
         skill_analysis = skill_extractor.extract_skills(resume_text)
-        job_recommendations = job_matcher.get_job_recommendations(
-            skill_analysis['skills'],
-            resume_text
-        )
+        print(f"Skills extracted: {len(skill_analysis.get('skills', []))}")
 
+        # Get job recommendations
+        print("Getting job recommendations...")
+        job_recommendations = job_matcher.get_job_recommendations(
+            skill_analysis.get('skills', []),  # Use .get() to avoid KeyError
+            resume_text,
+            top_n=25
+        )
+        print(f"Job recommendations: {len(job_recommendations)}")
+
+        # Prepare response
         result = {
             'success': True,
-            'resume_text': resume_text[:500] + '...' if len(resume_text) > 500 else resume_text,
+            'resume_text': resume_text[:1000] + '...' if len(resume_text) > 1000 else resume_text,
             'skills': skill_analysis,
-            'job_recommendations': json_safe(job_recommendations)
+            'job_recommendations': job_recommendations,
+            'stats': {
+                'text_length': len(resume_text),
+                'skills_found': len(skill_analysis.get('skills', [])),
+                'recommendations_count': len(job_recommendations)
+            }
         }
 
-        print("Result:", json.dumps(result, indent=2))
-        return json_response(result)
+        return jsonify(result)
 
     except Exception as e:
         print(f"Error in analyze_text: {e}")
         traceback.print_exc()
-        return json_response({'error': 'An error occurred while analyzing the text'}, 500)
+        return jsonify({
+            'error': 'An error occurred while analyzing the text',
+            'details': str(e) if app.debug else None
+        }), 500
 
 @app.route('/health')
 def health_check():
-    return json_response({
-        'status': 'healthy',
-        'message': 'JobIntel AI is running',
-        'models_loaded': {
-            'skill_extractor': skill_extractor is not None,
-            'job_matcher': job_matcher is not None,
-            'spacy_model': skill_extractor.nlp is not None if skill_extractor else False,
-            'sentence_transformer': skill_extractor.sentence_model is not None if skill_extractor else False
+    """Health check endpoint"""
+    try:
+        # Check model status
+        models_status = {
+            'skill_extractor_loaded': skill_extractor is not None,
+            'job_matcher_loaded': job_matcher is not None,
         }
-    })
 
-def json_safe(obj):
-    if isinstance(obj, list):
-        return [json_safe(o) for o in obj]
-    elif isinstance(obj, dict):
-        return {k: json_safe(v) for k, v in obj.items()}
-    elif isinstance(obj, float):
-        return round(float(obj), 4)
-    elif hasattr(obj, 'item'):
-        return obj.item()
-    return obj
+        # Additional checks if models are loaded
+        if skill_extractor:
+            try:
+                # Test skill extraction with simple text
+                test_result = skill_extractor.extract_skills("Python programming experience")
+                models_status['skill_extractor_working'] = len(test_result.get('skills', [])) > 0
+            except Exception as e:
+                models_status['skill_extractor_working'] = False
+                models_status['skill_extractor_error'] = str(e)
 
-def json_response(data, status=200):
-    return app.response_class(
-        response=json.dumps(json_safe(data), indent=2),
-        status=status,
-        mimetype='application/json'
-    )
+        if job_matcher:
+            try:
+                # Check if job matcher has data
+                stats = job_matcher.get_stats() if hasattr(job_matcher, 'get_stats') else None
+                models_status['job_matcher_working'] = stats is not None
+                if stats:
+                    models_status['job_data'] = stats
+            except Exception as e:
+                models_status['job_matcher_working'] = False
+                models_status['job_matcher_error'] = str(e)
+
+        # Overall health status
+        is_healthy = (
+            models_status.get('skill_extractor_loaded', False) and 
+            models_status.get('job_matcher_loaded', False) and
+            models_status.get('skill_extractor_working', False) and
+            models_status.get('job_matcher_working', False)
+        )
+
+        return jsonify({
+            'status': 'healthy' if is_healthy else 'degraded',
+            'message': 'JobIntel AI is running' if is_healthy else 'Some components may not be working properly',
+            'timestamp': datetime.now().isoformat(),
+            'models': models_status,
+            'system': {
+                'upload_folder_exists': os.path.exists(app.config['UPLOAD_FOLDER']),
+                'max_content_length': app.config['MAX_CONTENT_LENGTH']
+            }
+        }), 200 if is_healthy else 503
+
+    except Exception as e:
+        return jsonify({
+            'status': 'unhealthy',
+            'message': 'Health check failed',
+            'error': str(e),
+            'timestamp': datetime.now().isoformat()
+        }), 500
+
+# Error handlers
+@app.errorhandler(413)
+def too_large(e):
+    return jsonify({
+        'error': 'File too large',
+        'message': 'File size exceeds the maximum limit of 16MB'
+    }), 413
+
+@app.errorhandler(404)
+def not_found(e):
+    return jsonify({
+        'error': 'Endpoint not found',
+        'message': 'The requested endpoint does not exist'
+    }), 404
+
+@app.errorhandler(500)
+def internal_error(e):
+    return jsonify({
+        'error': 'Internal server error',
+        'message': 'An unexpected error occurred'
+    }), 500
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    print(f"Starting JobIntel AI API on port {port}...")
-    app.run(debug=False, host='0.0.0.0', port=port)
+    port = int(os.environ.get("PORT", 8080))
+    debug = os.environ.get("DEBUG", "False").lower() == "true"
+    
+    print(f"🚀 Starting JobIntel AI API on port {port}...")
+    print(f"📊 Debug mode: {debug}")
+    print(f"📁 Upload folder: {app.config['UPLOAD_FOLDER']}")
+    print(f"💾 Max file size: {app.config['MAX_CONTENT_LENGTH'] // (1024*1024)}MB")
+    
+    if skill_extractor and job_matcher:
+        print("✅ All models loaded successfully")
+    else:
+        print("⚠️  Some models failed to load - check logs above")
+    
+    app.run(debug=debug, host='0.0.0.0', port=port)
